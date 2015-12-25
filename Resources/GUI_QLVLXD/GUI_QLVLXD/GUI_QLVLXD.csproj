@@ -65,6 +65,12 @@
     <Compile Include="FrmDonViTinh.Designer.cs">
       <DependentUpon>FrmDonViTinh.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKhachHang.Designer.cs">
+      <DependentUpon>FrmKhachHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLoHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,10 +95,25 @@
     <Compile Include="FrmNhanVien.Designer.cs">
       <DependentUpon>FrmNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmPhieuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPhieuNhap.Designer.cs">
+      <DependentUpon>FrmPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmThamSo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmThamSo.Designer.cs">
+      <DependentUpon>FrmThamSo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmDonViTinh.resx">
       <DependentUpon>FrmDonViTinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmKhachHang.resx">
+      <DependentUpon>FrmKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLoHang.resx">
       <DependentUpon>FrmLoHang.cs</DependentUpon>
@@ -105,6 +126,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmNhanVien.resx">
       <DependentUpon>FrmNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPhieuNhap.resx">
+      <DependentUpon>FrmPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmThamSo.resx">
+      <DependentUpon>FrmThamSo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -135,6 +162,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Icons\File-Delete-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Add-Folder-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Save-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Folders-OS-Exit-Full-Screen-Metro-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
