@@ -187,7 +187,19 @@ FakesAssemblies/
 GeneratedArtifacts/
 _Pvt_Extensions/
 ModelManifest.xml
-Resources/GUI_QLVLXD/GUI_QLVLXD/bin/
-Resources/GUI_QLVLXD/GUI_QLVLXD/obj/
-
-Tạo một trang content -> link tới
+Resources/QLVLXD/GUI/bin/
+Resources/QLVLXD/GUI/obj/
+Resources/QLVLXD/BUS/bin/
+Resources/QLVLXD/BUS/obj/
+Resources/QLVLXD/DTO/bin/
+Resources/QLVLXD/DTO/obj/
+Resources/QLVLXD/DAL/bin/
+Resources/QLVLXD/DAL/obj/
+QL_VLXD/DAL/bin/
+QL_VLXD/DAL/obj/
+QL_VLXD/DTO/bin/
+QL_VLXD/DTO/obj/
+QL_VLXD/BUS/bin/
+QL_VLXD/BUS/obj/
+QL_VLXD/QL_VLXD/bin/
+QL_VLXD/QL_VLXD/obj/

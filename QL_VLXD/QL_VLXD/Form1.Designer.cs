@@ -35,6 +35,7 @@
             this.trảHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lậpKHNhậpHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kiểmKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -90,11 +91,21 @@
             this.kiểmKêToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.kiểmKêToolStripMenuItem.Text = "Kiểm kê";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(322, 64);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(42, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "nguyen";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(640, 384);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
@@ -115,6 +126,7 @@
         private System.Windows.Forms.ToolStripMenuItem trảHàngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lậpKHNhậpHàngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kiểmKêToolStripMenuItem;
+        private System.Windows.Forms.Label label1;
     }
 }
 

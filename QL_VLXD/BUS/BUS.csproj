@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS_Form1.cs" />
     <Compile Include="BUS_HDBanHang.cs" />
     <Compile Include="BUS_MatHang.cs" />
     <Compile Include="BUS_PhieuKiemKe.cs" />
@@ -50,6 +51,7 @@
     <Compile Include="BUS_XuatKho.cs" />
     <Compile Include="BUS_KhachHang.cs" />
     <Compile Include="BUS_NhanVien.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
