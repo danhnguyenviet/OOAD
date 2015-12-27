@@ -11,20 +11,13 @@ namespace DAL
     public class Connection
     {
         SqlConnection connect;
-        SqlDataAdapter da;
-        SqlCommand command;
-        public Connection()
-        {
-            Connect();
-        }
-
-        public void Connect()
+        //Mở kết nối
+        public void MoKetNoi()
         {
             connect = new SqlConnection(global::DAL.Properties.Settings.Default.QL_VLXDConnectionString);
             try
             {
                 connect.Open();
-                connect.Close();
             }
             catch (Exception ex)
             {
@@ -32,41 +25,28 @@ namespace DAL
                 
             }
         }
-
-        public DataTable getDS(string sql)
+        //Đóng kết nối
+        public void DongKetNoi()
         {
-            DataTable table = new DataTable();
-            da = new SqlDataAdapter(sql, connect);
-            da.Fill(table);
-            return table;
+            connect.Close();
         }
-
-        public bool ExecuteNonQueryPara(string sql, string[] parameters, object[] value)
+        //Thực hiện câu lệnh SQL thêm xóa sửa
+        public void ThucHienCauLenhSQL(string strSQL)
         {
-            int number = 0;
-            try
-            {
-                if (connect.State == ConnectionState.Closed)
-                {
-                    connect.Open();
-                }
-                command = new SqlCommand(sql, connect);
-                SqlParameter p;
-                for (int i = 0; i < parameters.Length; i++)
-                {
-                    p = new SqlParameter(parameters[i], value[i]);
-                    command.Parameters.Add(p);
-                }
-                number = command.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi: " + ex.Message);
-            }
-            if (number > 0)
-                return true;
-            else
-                return false;
+            MoKetNoi();
+            SqlCommand sqlcmd = new SqlCommand(strSQL, connect);
+            sqlcmd.ExecuteNonQuery();
+            DongKetNoi();
+        }
+        //Thực hiện lấy dữ liệu từ database
+        public DataTable GetDataTable(string strSQL)
+        {
+            MoKetNoi();
+            DataTable dt = new DataTable();
+            SqlDataAdapter sqlda = new SqlDataAdapter(strSQL, this.connect);
+            sqlda.Fill(dt);
+            DongKetNoi();
+            return dt;
         }
     }
 }

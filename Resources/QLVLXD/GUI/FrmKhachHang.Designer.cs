@@ -29,23 +29,25 @@
         private void InitializeComponent()
         {
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.textDiaChi = new DevExpress.XtraEditors.TextEdit();
             this.txtHoTen = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.txtMaKhachHang = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.dgvDanhSachKhachHang = new System.Windows.Forms.DataGridView();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
-            this.splitContainerControlWin641 = new DevExpress.XtraCharts.Wizard.SplitContainerControlWin64();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.textDiaChi = new DevExpress.XtraEditors.TextEdit();
-            this.textSdt = new DevExpress.XtraEditors.TextEdit();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
+            this.splitContainerControlWin641 = new DevExpress.XtraCharts.Wizard.SplitContainerControlWin64();
+            this.btnLuu = new System.Windows.Forms.Button();
+            this.dtNgayCapThe = new DevExpress.XtraEditors.DateEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textDiaChi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHoTen.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaKhachHang.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachKhachHang)).BeginInit();
@@ -55,13 +57,13 @@
             this.groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControlWin641)).BeginInit();
             this.splitContainerControlWin641.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textDiaChi.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textSdt.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtNgayCapThe.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtNgayCapThe.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
             // 
-            this.groupControl1.Controls.Add(this.textSdt);
+            this.groupControl1.Controls.Add(this.dtNgayCapThe);
             this.groupControl1.Controls.Add(this.textDiaChi);
             this.groupControl1.Controls.Add(this.txtHoTen);
             this.groupControl1.Controls.Add(this.labelControl4);
@@ -76,6 +78,13 @@
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Thông tin khách hàng";
             // 
+            // textDiaChi
+            // 
+            this.textDiaChi.Location = new System.Drawing.Point(281, 108);
+            this.textDiaChi.Name = "textDiaChi";
+            this.textDiaChi.Size = new System.Drawing.Size(248, 20);
+            this.textDiaChi.TabIndex = 1;
+            // 
             // txtHoTen
             // 
             this.txtHoTen.Location = new System.Drawing.Point(281, 71);
@@ -83,12 +92,28 @@
             this.txtHoTen.Size = new System.Drawing.Size(248, 20);
             this.txtHoTen.TabIndex = 1;
             // 
+            // labelControl4
+            // 
+            this.labelControl4.Location = new System.Drawing.Point(197, 145);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(64, 13);
+            this.labelControl4.TabIndex = 0;
+            this.labelControl4.Text = "Ngày cấp thẻ";
+            // 
             // txtMaKhachHang
             // 
             this.txtMaKhachHang.Location = new System.Drawing.Point(281, 37);
             this.txtMaKhachHang.Name = "txtMaKhachHang";
             this.txtMaKhachHang.Size = new System.Drawing.Size(100, 20);
             this.txtMaKhachHang.TabIndex = 1;
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Location = new System.Drawing.Point(197, 111);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(32, 13);
+            this.labelControl3.TabIndex = 0;
+            this.labelControl3.Text = "Địa chỉ";
             // 
             // labelControl2
             // 
@@ -114,6 +139,7 @@
             this.dgvDanhSachKhachHang.Name = "dgvDanhSachKhachHang";
             this.dgvDanhSachKhachHang.Size = new System.Drawing.Size(694, 150);
             this.dgvDanhSachKhachHang.TabIndex = 0;
+            this.dgvDanhSachKhachHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDanhSachKhachHang_CellClick);
             // 
             // groupControl2
             // 
@@ -127,6 +153,7 @@
             // 
             // groupControl3
             // 
+            this.groupControl3.Controls.Add(this.btnLuu);
             this.groupControl3.Controls.Add(this.btnXoa);
             this.groupControl3.Controls.Add(this.btnSua);
             this.groupControl3.Controls.Add(this.btnThem);
@@ -135,6 +162,48 @@
             this.groupControl3.Name = "groupControl3";
             this.groupControl3.Size = new System.Drawing.Size(698, 67);
             this.groupControl3.TabIndex = 1;
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.Image = global::GUI_QLVLXD.Properties.Resources.File_Delete_icon;
+            this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXoa.Location = new System.Drawing.Point(423, 24);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(72, 37);
+            this.btnXoa.TabIndex = 0;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // btnSua
+            // 
+            this.btnSua.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.Image = global::GUI_QLVLXD.Properties.Resources.Actions_document_edit_icon;
+            this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSua.Location = new System.Drawing.Point(324, 24);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(73, 37);
+            this.btnSua.TabIndex = 0;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
+            // btnThem
+            // 
+            this.btnThem.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.Image = global::GUI_QLVLXD.Properties.Resources.Button_Add_icon;
+            this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThem.Location = new System.Drawing.Point(100, 24);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(87, 37);
+            this.btnThem.TabIndex = 0;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // splitContainerControlWin641
             // 
@@ -152,74 +221,31 @@
             this.splitContainerControlWin641.TabIndex = 2;
             this.splitContainerControlWin641.Text = "splitContainerControlWin641";
             // 
-            // labelControl3
+            // btnLuu
             // 
-            this.labelControl3.Location = new System.Drawing.Point(197, 111);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(32, 13);
-            this.labelControl3.TabIndex = 0;
-            this.labelControl3.Text = "Địa chỉ";
+            this.btnLuu.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.Image = global::GUI_QLVLXD.Properties.Resources.Save_icon;
+            this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLuu.Location = new System.Drawing.Point(218, 25);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(87, 37);
+            this.btnLuu.TabIndex = 1;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
-            // labelControl4
+            // dtNgayCapThe
             // 
-            this.labelControl4.Location = new System.Drawing.Point(197, 145);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(62, 13);
-            this.labelControl4.TabIndex = 0;
-            this.labelControl4.Text = "Số điện thoại";
-            // 
-            // textDiaChi
-            // 
-            this.textDiaChi.Location = new System.Drawing.Point(281, 108);
-            this.textDiaChi.Name = "textDiaChi";
-            this.textDiaChi.Size = new System.Drawing.Size(248, 20);
-            this.textDiaChi.TabIndex = 1;
-            // 
-            // textSdt
-            // 
-            this.textSdt.Location = new System.Drawing.Point(281, 142);
-            this.textSdt.Name = "textSdt";
-            this.textSdt.Size = new System.Drawing.Size(248, 20);
-            this.textSdt.TabIndex = 1;
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.Image = global::GUI_QLVLXD.Properties.Resources.File_Delete_icon;
-            this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.Location = new System.Drawing.Point(423, 24);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(72, 37);
-            this.btnXoa.TabIndex = 0;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnXoa.UseVisualStyleBackColor = true;
-            // 
-            // btnSua
-            // 
-            this.btnSua.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.Image = global::GUI_QLVLXD.Properties.Resources.Actions_document_edit_icon;
-            this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSua.Location = new System.Drawing.Point(324, 24);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(73, 37);
-            this.btnSua.TabIndex = 0;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSua.UseVisualStyleBackColor = true;
-            // 
-            // btnThem
-            // 
-            this.btnThem.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Image = global::GUI_QLVLXD.Properties.Resources.Button_Add_icon;
-            this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThem.Location = new System.Drawing.Point(214, 24);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(87, 37);
-            this.btnThem.TabIndex = 0;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnThem.UseVisualStyleBackColor = true;
+            this.dtNgayCapThe.EditValue = null;
+            this.dtNgayCapThe.Location = new System.Drawing.Point(281, 138);
+            this.dtNgayCapThe.Name = "dtNgayCapThe";
+            this.dtNgayCapThe.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtNgayCapThe.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtNgayCapThe.Size = new System.Drawing.Size(100, 20);
+            this.dtNgayCapThe.TabIndex = 2;
             // 
             // FrmKhachHang
             // 
@@ -229,9 +255,11 @@
             this.Controls.Add(this.splitContainerControlWin641);
             this.Name = "FrmKhachHang";
             this.Text = "FrmKhachHang";
+            this.Load += new System.EventHandler(this.FrmKhachHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textDiaChi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHoTen.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaKhachHang.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachKhachHang)).EndInit();
@@ -241,8 +269,8 @@
             this.groupControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControlWin641)).EndInit();
             this.splitContainerControlWin641.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.textDiaChi.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textSdt.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtNgayCapThe.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtNgayCapThe.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -261,9 +289,10 @@
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnThem;
         private DevExpress.XtraCharts.Wizard.SplitContainerControlWin64 splitContainerControlWin641;
-        private DevExpress.XtraEditors.TextEdit textSdt;
         private DevExpress.XtraEditors.TextEdit textDiaChi;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl3;
+        private System.Windows.Forms.Button btnLuu;
+        private DevExpress.XtraEditors.DateEdit dtNgayCapThe;
     }
 }
