@@ -76,6 +76,7 @@
             this.btnMatHang,
             this.btnNhaCungCap});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
+            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ribbonControl1.MaxItemId = 12;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -85,7 +86,7 @@
             this.ribbonPage4,
             this.ribbonPage5});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.ribbonControl1.Size = new System.Drawing.Size(821, 144);
+            this.ribbonControl1.Size = new System.Drawing.Size(958, 155);
             // 
             // btnNhapKho
             // 
@@ -257,16 +258,17 @@
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "ribbonPageGroup1";
             // 
-            // frmMain
+            // FrmMain
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.False;
             this.Appearance.BackColor = System.Drawing.Color.White;
             this.Appearance.Options.UseBackColor = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(821, 360);
+            this.ClientSize = new System.Drawing.Size(958, 443);
             this.Controls.Add(this.ribbonControl1);
-            this.Name = "frmMain";
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "FrmMain";
             this.Ribbon = this.ribbonControl1;
             this.Text = "Quản lý cửa hàng VLXD";
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();

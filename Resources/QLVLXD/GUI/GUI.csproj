@@ -172,6 +172,12 @@
   <ItemGroup>
     <None Include="Icons\Folders-OS-Exit-Full-Screen-Metro-icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BUS\BUS.csproj">
+      <Project>{ef930fe3-f20a-4ed7-8c0d-b758b00f6dd0}</Project>
+      <Name>BUS</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
