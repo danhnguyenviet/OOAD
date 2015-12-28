@@ -13,6 +13,7 @@ namespace DAL
         SqlConnection connect;
         //Mở kết nối
         public void MoKetNoi()
+            //mầy làm tiếp đi
         {
             connect = new SqlConnection(global::DAL.Properties.Settings.Default.QL_VLXDConnectionString);
             try
