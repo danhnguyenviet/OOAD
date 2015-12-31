@@ -172,6 +172,20 @@
   <ItemGroup>
     <None Include="Icons\Folders-OS-Exit-Full-Screen-Metro-icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BUS\BUS.csproj">
+      <Project>{ef930fe3-f20a-4ed7-8c0d-b758b00f6dd0}</Project>
+      <Name>BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{30ec7e5e-4289-4b9b-8964-e1400a88d88b}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{eae3dd2e-db34-4cf8-9c6c-ac0aa543e1ec}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
