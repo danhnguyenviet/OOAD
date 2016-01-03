@@ -47,8 +47,12 @@
     <Reference Include="DevExpress.XtraNavBar.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraReports.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraTreeList.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -59,17 +63,79 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaoCaoCongNoKH.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaoCaoCongNoKH.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCaoDoanhThu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaoCaoDoanhThu.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCaoKinhDoanh.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaoCaoKinhDoanh.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCaoTonKho.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaoCaoTonKho.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBaoCaoCongNoKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBaoCaoCongNoKH.Designer.cs">
+      <DependentUpon>FrmBaoCaoCongNoKH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBaoCaoTonKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBaoCaoTonKho.Designer.cs">
+      <DependentUpon>FrmBaoCaoTonKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBackupRestore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBackupRestore.designer.cs">
+      <DependentUpon>FrmBackupRestore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBaoCaoDoanhThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBaoCaoDoanhThu.Designer.cs">
+      <DependentUpon>FrmBaoCaoDoanhThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChangepass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChangepass.designer.cs">
+      <DependentUpon>frmChangepass.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmDonViTinh.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmDonViTinh.Designer.cs">
       <DependentUpon>FrmDonViTinh.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmInfosql.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInfosql.designer.cs">
+      <DependentUpon>FrmInfosql.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmKhachHang.Designer.cs">
       <DependentUpon>FrmKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmLoHang.cs">
       <SubType>Form</SubType>
@@ -109,6 +175,25 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BaoCaoCongNoKH.rdlc" />
+    <EmbeddedResource Include="BaoCaoDoanhThu.rdlc" />
+    <EmbeddedResource Include="BaoCaoKinhDoanh.rdlc" />
+    <EmbeddedResource Include="BaoCaoTonKho.rdlc" />
+    <EmbeddedResource Include="FrmBackupRestore.resx">
+      <DependentUpon>FrmBackupRestore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBaoCaoCongNoKH.resx">
+      <DependentUpon>FrmBaoCaoCongNoKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBaoCaoDoanhThu.resx">
+      <DependentUpon>FrmBaoCaoDoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBaoCaoTonKho.resx">
+      <DependentUpon>FrmBaoCaoTonKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChangepass.resx">
+      <DependentUpon>frmChangepass.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmDonViTinh.resx">
       <DependentUpon>FrmDonViTinh.cs</DependentUpon>
     </EmbeddedResource>
@@ -144,6 +229,53 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BaoCaoCongNoKH.xsc">
+      <DependentUpon>BaoCaoCongNoKH.xsd</DependentUpon>
+    </None>
+    <None Include="BaoCaoCongNoKH.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BaoCaoCongNoKH.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="BaoCaoCongNoKH.xss">
+      <DependentUpon>BaoCaoCongNoKH.xsd</DependentUpon>
+    </None>
+    <None Include="BaoCaoDoanhThu.xsc">
+      <DependentUpon>BaoCaoDoanhThu.xsd</DependentUpon>
+    </None>
+    <None Include="BaoCaoDoanhThu.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BaoCaoDoanhThu.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="BaoCaoDoanhThu.xss">
+      <DependentUpon>BaoCaoDoanhThu.xsd</DependentUpon>
+    </None>
+    <None Include="BaoCaoKinhDoanh.xsc">
+      <DependentUpon>BaoCaoKinhDoanh.xsd</DependentUpon>
+    </None>
+    <None Include="BaoCaoKinhDoanh.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BaoCaoKinhDoanh.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="BaoCaoKinhDoanh.xss">
+      <DependentUpon>BaoCaoKinhDoanh.xsd</DependentUpon>
+    </None>
+    <None Include="BaoCaoTonKho.xsc">
+      <DependentUpon>BaoCaoTonKho.xsd</DependentUpon>
+    </None>
+    <None Include="BaoCaoTonKho.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BaoCaoTonKho.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="BaoCaoTonKho.xss">
+      <DependentUpon>BaoCaoTonKho.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -171,6 +303,19 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Icons\Folders-OS-Exit-Full-Screen-Metro-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BUS\BUS.csproj">
+      <Project>{ef930fe3-f20a-4ed7-8c0d-b758b00f6dd0}</Project>
+      <Name>BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{eae3dd2e-db34-4cf8-9c6c-ac0aa543e1ec}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="script.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
