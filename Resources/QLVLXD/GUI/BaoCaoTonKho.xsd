@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="BaoCaoTonKho" targetNamespace="http://tempuri.org/BaoCaoTonKho.xsd" xmlns:mstns="http://tempuri.org/BaoCaoTonKho.xsd" xmlns="http://tempuri.org/BaoCaoTonKho.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="BaoCaoTonKho" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="BaoCaoTonKho" msprop:Generator_UserDSName="BaoCaoTonKho">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BaoCaoTonKho" msprop:Generator_TableClassName="BaoCaoTonKhoDataTable" msprop:Generator_TableVarName="tableBaoCaoTonKho" msprop:Generator_RowChangedName="BaoCaoTonKhoRowChanged" msprop:Generator_TablePropName="_BaoCaoTonKho" msprop:Generator_RowDeletingName="BaoCaoTonKhoRowDeleting" msprop:Generator_RowChangingName="BaoCaoTonKhoRowChanging" msprop:Generator_RowEvHandlerName="BaoCaoTonKhoRowChangeEventHandler" msprop:Generator_RowDeletedName="BaoCaoTonKhoRowDeleted" msprop:Generator_RowClassName="BaoCaoTonKhoRow" msprop:Generator_UserTableName="BaoCaoTonKho" msprop:Generator_RowEvArgName="BaoCaoTonKhoRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TenMH" msprop:Generator_ColumnVarNameInTable="columnTenMH" msprop:Generator_ColumnPropNameInRow="TenMH" msprop:Generator_ColumnPropNameInTable="TenMHColumn" msprop:Generator_UserColumnName="TenMH" type="xs:string" minOccurs="0" />
+              <xs:element name="SLNhap" msprop:Generator_ColumnVarNameInTable="columnSLNhap" msprop:Generator_ColumnPropNameInRow="SLNhap" msprop:Generator_ColumnPropNameInTable="SLNhapColumn" msprop:Generator_UserColumnName="SLNhap" type="xs:string" minOccurs="0" />
+              <xs:element name="SLBan" msprop:Generator_ColumnVarNameInTable="columnSLBan" msprop:Generator_ColumnPropNameInRow="SLBan" msprop:Generator_ColumnPropNameInTable="SLBanColumn" msprop:Generator_UserColumnName="SLBan" type="xs:string" minOccurs="0" />
+              <xs:element name="SLThuc" msprop:Generator_ColumnVarNameInTable="columnSLThuc" msprop:Generator_ColumnPropNameInRow="SLThuc" msprop:Generator_ColumnPropNameInTable="SLThucColumn" msprop:Generator_UserColumnName="SLThuc" type="xs:string" minOccurs="0" />
+              <xs:element name="SLTon" msprop:Generator_ColumnVarNameInTable="columnSLTon" msprop:Generator_ColumnPropNameInRow="SLTon" msprop:Generator_ColumnPropNameInTable="SLTonColumn" msprop:Generator_UserColumnName="SLTon" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
