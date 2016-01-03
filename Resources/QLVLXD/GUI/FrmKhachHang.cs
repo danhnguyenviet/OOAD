@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using BUS;
-using DAL;
 using DTO;
 
 namespace GUI_QLVLXD
@@ -19,7 +18,6 @@ namespace GUI_QLVLXD
         bool Them;
         DTO_KhachHang khDTO=new DTO_KhachHang();
         BUS_KhachHang khBUS=new BUS_KhachHang();
-        Connection helper = new Connection();
         
         public FrmKhachHang()
         {
