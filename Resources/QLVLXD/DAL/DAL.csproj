@@ -47,11 +47,13 @@
     <Compile Include="DAL_BaoCaoTonKho.cs" />
     <Compile Include="DAL_BaoCaoDoanhThu.cs" />
     <Compile Include="DAL_Changepass.cs" />
+    <Compile Include="DAL_DonViTinh.cs" />
     <Compile Include="DAL_HDBanHang.cs" />
     <Compile Include="DAL_Infosql.cs" />
     <Compile Include="DAL_KhachHang.cs" />
     <Compile Include="DAL_Login.cs" />
     <Compile Include="DAL_MatHang.cs" />
+    <Compile Include="DAL_NhaCC.cs" />
     <Compile Include="DAL_NhanVien.cs" />
     <Compile Include="DAL_PhieuKiemKe.cs" />
     <Compile Include="DAL_PhieuNhapHang.cs" />
