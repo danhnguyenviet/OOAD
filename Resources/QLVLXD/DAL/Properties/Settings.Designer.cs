@@ -22,16 +22,5 @@ namespace DAL.Properties {
                 return defaultInstance;
             }
         }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\v11.0;Initial Catalog=QL_VLXD;Integrated Security=True;Conn" +
-            "ect Timeout=15;Encrypt=False;TrustServerCertificate=False")]
-        public string QL_VLXDConnectionString {
-            get {
-                return ((string)(this["QL_VLXDConnectionString"]));
-            }
-        }
     }
 }
