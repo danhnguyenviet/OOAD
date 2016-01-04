@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,6 +41,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DTO_Backup-Restore.cs" />
+    <Compile Include="DTO_BaoCaoCongNo.cs" />
+    <Compile Include="DTO_BaoCaoTonKho.cs" />
+    <Compile Include="DTO_BaoCaoDoanhThu.cs" />
     <Compile Include="DTO_Changepass.cs" />
     <Compile Include="DTO_HDBanHang.cs" />
     <Compile Include="DTO_Infosql.cs" />

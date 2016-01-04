@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Configuration;
+using System.IO;
 using System.Windows.Forms;
 using DAL;
 using DTO;
@@ -32,6 +33,8 @@ namespace BUS
 
             return dal_thaydoicaidat.CapNhatDataSource(ChuoiKetNoiMoi);
         }
+
+       
 
         public Boolean XayDungCoSoDuLieuMoi(DTO_Infosql thongtincaidat, Boolean chinhsua, Boolean dangnhapbangwindow)
         {
@@ -71,7 +74,11 @@ namespace BUS
                 }
             }
             ChuoiKetNoi += ";Connect Timeout=30;Encrypt=False;TrustServerCertificate=False";
-            return CapNhatDataSource(ChuoiKetNoi);
+            bool ketnoi =  CapNhatDataSource(ChuoiKetNoi);
+
+            if(!chinhsua)
+                dal_thaydoicaidat.TaoCoSoDuLieuMoi(thongtincaidat.TenServer);
+            return ketnoi;
         }
     }
 }

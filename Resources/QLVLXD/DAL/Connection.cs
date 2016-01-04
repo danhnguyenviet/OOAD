@@ -11,15 +11,15 @@ namespace DAL
 {
     public class Connection
     {
-        SqlConnection connect;
+        public SqlConnection connect;
         //Mở kết nối
         public void MoKetNoi()
             //mầy làm tiếp đi
         {
             
             Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-           
-            connect = new SqlConnection( ConfigurationManager.ConnectionStrings["DAL.Properties.Settings.QL_VLXDConnectionString"].ConnectionString);
+
+            connect = new SqlConnection(ConfigurationManager.ConnectionStrings["DAL.Properties.Settings.QL_VLXDConnectionString"].ConnectionString);
             try
             {
                 connect.Open();

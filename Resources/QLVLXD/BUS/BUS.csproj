@@ -42,6 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BUS_Backup-Restore.cs" />
+    <Compile Include="BUS_BaoCaoCongNo.cs" />
+    <Compile Include="BUS_BaoCaoTonKho.cs" />
+    <Compile Include="BUS_BaoCaoDoanhThu.cs" />
     <Compile Include="BUS_Changepass.cs" />
     <Compile Include="BUS_HDBanHang.cs" />
     <Compile Include="BUS_HoaDonBanHang.cs" />

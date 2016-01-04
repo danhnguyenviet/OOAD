@@ -26,7 +26,7 @@ namespace GUI_QLVLXD.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\Projects;Initial Catalog=QL_VLXD;Integrated Security=True;C" +
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\Projects;Initial Catalog=QL_VLXD;Integrated Security=True")]
             "onnect Timeout=30;Encrypt=False;TrustServerCertificate=False")]
         public string QL_VLXDConnectionString {
             get {

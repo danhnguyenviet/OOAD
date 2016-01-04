@@ -12,9 +12,9 @@ namespace GUI_QLVLXD
     public partial class FrmMain : DevExpress.XtraBars.Ribbon.RibbonForm
     {
 
-        public static string username = "KIDWAR";
-        public static string quyen = "admin";
-        public static string lop = "10A1";
+        public static string username;
+        public static string matkhau;
+        public static string quyen;
         public static string mon = "D1";
 
         public FrmMain()

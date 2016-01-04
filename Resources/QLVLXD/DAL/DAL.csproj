@@ -43,6 +43,9 @@
   <ItemGroup>
     <Compile Include="Connection.cs" />
     <Compile Include="DAL_Backup-Restore.cs" />
+    <Compile Include="DAL_BaoCaoCongNo.cs" />
+    <Compile Include="DAL_BaoCaoTonKho.cs" />
+    <Compile Include="DAL_BaoCaoDoanhThu.cs" />
     <Compile Include="DAL_Changepass.cs" />
     <Compile Include="DAL_HDBanHang.cs" />
     <Compile Include="DAL_Infosql.cs" />
