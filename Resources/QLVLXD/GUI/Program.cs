@@ -15,7 +15,7 @@ namespace GUI_QLVLXD
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMatHang());
+            Application.Run(new FrmKiemKe());
         }
     }
 }

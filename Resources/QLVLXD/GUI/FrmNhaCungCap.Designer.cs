@@ -1,6 +1,6 @@
 ﻿namespace GUI_QLVLXD
 {
-    partial class FrmKhachHang
+    partial class FrmNhaCungCap
     {
         /// <summary>
         /// Required designer variable.
@@ -41,17 +41,17 @@
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.qL_VLXDDataSetChung = new GUI_QLVLXD.QL_VLXDDataSetChung();
-            this.khachHangBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.khachHangTableAdapter = new GUI_QLVLXD.QL_VLXDDataSetChungTableAdapters.KhachHangTableAdapter();
-            this.colMaKH = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colHoTen = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.nhaCCBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nhaCCTableAdapter = new GUI_QLVLXD.QL_VLXDDataSetChungTableAdapters.NhaCCTableAdapter();
+            this.colMaNCC = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTenNCC = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDiaChi = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colNgayCapThe = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSDT = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qL_VLXDDataSetChung)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.khachHangBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nhaCCBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -76,28 +76,28 @@
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Size = new System.Drawing.Size(698, 49);
+            this.barDockControlTop.Size = new System.Drawing.Size(389, 49);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 418);
-            this.barDockControlBottom.Size = new System.Drawing.Size(698, 23);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 258);
+            this.barDockControlBottom.Size = new System.Drawing.Size(389, 23);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 49);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 369);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 209);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(698, 49);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 369);
+            this.barDockControlRight.Location = new System.Drawing.Point(389, 49);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 209);
             // 
             // bar1
             // 
@@ -137,13 +137,13 @@
             // gridControl1
             // 
             this.gridControl1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.gridControl1.DataSource = this.khachHangBindingSource;
+            this.gridControl1.DataSource = this.nhaCCBindingSource;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Location = new System.Drawing.Point(0, 49);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.MenuManager = this.barManager1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(698, 369);
+            this.gridControl1.Size = new System.Drawing.Size(389, 209);
             this.gridControl1.TabIndex = 4;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -151,13 +151,13 @@
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colMaKH,
-            this.colHoTen,
+            this.colMaNCC,
+            this.colTenNCC,
             this.colDiaChi,
-            this.colNgayCapThe});
+            this.colSDT});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
-            this.gridView1.NewItemRowText = "Thêm khách hàng mới";
+            this.gridView1.NewItemRowText = "Thêm nhà cung cấp";
             this.gridView1.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.True;
             this.gridView1.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.True;
             this.gridView1.OptionsBehavior.EditingMode = DevExpress.XtraGrid.Views.Grid.GridEditingMode.EditFormInplaceHideCurrentRow;
@@ -172,30 +172,30 @@
             this.qL_VLXDDataSetChung.DataSetName = "QL_VLXDDataSetChung";
             this.qL_VLXDDataSetChung.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // khachHangBindingSource
+            // nhaCCBindingSource
             // 
-            this.khachHangBindingSource.DataMember = "KhachHang";
-            this.khachHangBindingSource.DataSource = this.qL_VLXDDataSetChung;
+            this.nhaCCBindingSource.DataMember = "NhaCC";
+            this.nhaCCBindingSource.DataSource = this.qL_VLXDDataSetChung;
             // 
-            // khachHangTableAdapter
+            // nhaCCTableAdapter
             // 
-            this.khachHangTableAdapter.ClearBeforeFill = true;
+            this.nhaCCTableAdapter.ClearBeforeFill = true;
             // 
-            // colMaKH
+            // colMaNCC
             // 
-            this.colMaKH.Caption = "Mã";
-            this.colMaKH.FieldName = "MaKH";
-            this.colMaKH.Name = "colMaKH";
-            this.colMaKH.Visible = true;
-            this.colMaKH.VisibleIndex = 1;
+            this.colMaNCC.Caption = "Mã";
+            this.colMaNCC.FieldName = "MaNCC";
+            this.colMaNCC.Name = "colMaNCC";
+            this.colMaNCC.Visible = true;
+            this.colMaNCC.VisibleIndex = 1;
             // 
-            // colHoTen
+            // colTenNCC
             // 
-            this.colHoTen.Caption = "Tên";
-            this.colHoTen.FieldName = "HoTen";
-            this.colHoTen.Name = "colHoTen";
-            this.colHoTen.Visible = true;
-            this.colHoTen.VisibleIndex = 2;
+            this.colTenNCC.Caption = "Nhà cung cấp";
+            this.colTenNCC.FieldName = "TenNCC";
+            this.colTenNCC.Name = "colTenNCC";
+            this.colTenNCC.Visible = true;
+            this.colTenNCC.VisibleIndex = 2;
             // 
             // colDiaChi
             // 
@@ -205,32 +205,32 @@
             this.colDiaChi.Visible = true;
             this.colDiaChi.VisibleIndex = 3;
             // 
-            // colNgayCapThe
+            // colSDT
             // 
-            this.colNgayCapThe.Caption = "Ngày cấp thẻ";
-            this.colNgayCapThe.FieldName = "NgayCapThe";
-            this.colNgayCapThe.Name = "colNgayCapThe";
-            this.colNgayCapThe.Visible = true;
-            this.colNgayCapThe.VisibleIndex = 4;
+            this.colSDT.Caption = "Số điện thoại";
+            this.colSDT.FieldName = "SDT";
+            this.colSDT.Name = "colSDT";
+            this.colSDT.Visible = true;
+            this.colSDT.VisibleIndex = 4;
             // 
-            // FrmKhachHang
+            // FrmNhaCungCap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(698, 441);
+            this.ClientSize = new System.Drawing.Size(389, 281);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
-            this.Name = "FrmKhachHang";
-            this.Text = "FrmKhachHang";
-            this.Load += new System.EventHandler(this.FrmKhachHang_Load);
+            this.Name = "FrmNhaCungCap";
+            this.Text = "FrmNhaCungCap";
+            this.Load += new System.EventHandler(this.FrmNhaCungCap_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qL_VLXDDataSetChung)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.khachHangBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nhaCCBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -239,21 +239,21 @@
 
         private DevExpress.XtraBars.BarManager barManager1;
         private DevExpress.XtraBars.Bar bar1;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.Bar bar2;
         private DevExpress.XtraBars.Bar bar3;
         private DevExpress.XtraBars.BarDockControl barDockControlTop;
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private QL_VLXDDataSetChung qL_VLXDDataSetChung;
-        private System.Windows.Forms.BindingSource khachHangBindingSource;
-        private QL_VLXDDataSetChungTableAdapters.KhachHangTableAdapter khachHangTableAdapter;
-        private DevExpress.XtraGrid.Columns.GridColumn colMaKH;
-        private DevExpress.XtraGrid.Columns.GridColumn colHoTen;
+        private System.Windows.Forms.BindingSource nhaCCBindingSource;
+        private QL_VLXDDataSetChungTableAdapters.NhaCCTableAdapter nhaCCTableAdapter;
+        private DevExpress.XtraGrid.Columns.GridColumn colMaNCC;
+        private DevExpress.XtraGrid.Columns.GridColumn colTenNCC;
         private DevExpress.XtraGrid.Columns.GridColumn colDiaChi;
-        private DevExpress.XtraGrid.Columns.GridColumn colNgayCapThe;
+        private DevExpress.XtraGrid.Columns.GridColumn colSDT;
     }
 }
