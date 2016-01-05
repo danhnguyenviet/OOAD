@@ -31,7 +31,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -39,10 +41,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS_Backup-Restore.cs" />
+    <Compile Include="BUS_BaoCaoCongNo.cs" />
+    <Compile Include="BUS_BaoCaoTonKho.cs" />
+    <Compile Include="BUS_BaoCaoDoanhThu.cs" />
+    <Compile Include="BUS_Changepass.cs" />
+    <Compile Include="BUS_DonViTinh.cs" />
     <Compile Include="BUS_HDBanHang.cs" />
     <Compile Include="BUS_HoaDonBanHang.cs" />
+    <Compile Include="BUS_Infosql.cs" />
     <Compile Include="BUS_KhachHang.cs" />
+    <Compile Include="BUS_Login.cs" />
     <Compile Include="BUS_MatHang.cs" />
+    <Compile Include="BUS_NhaCC.cs" />
     <Compile Include="BUS_NhanVien.cs" />
     <Compile Include="BUS_PhieuKiemKe.cs" />
     <Compile Include="BUS_PhieuNhapHang.cs" />
