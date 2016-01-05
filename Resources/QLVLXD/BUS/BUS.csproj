@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
@@ -49,10 +50,10 @@
     <Compile Include="BUS_HDBanHang.cs" />
     <Compile Include="BUS_HoaDonBanHang.cs" />
     <Compile Include="BUS_Infosql.cs" />
-    <Compile Include="BUS_NhaCC.cs" />
     <Compile Include="BUS_KhachHang.cs" />
     <Compile Include="BUS_Login.cs" />
     <Compile Include="BUS_MatHang.cs" />
+    <Compile Include="BUS_NhaCC.cs" />
     <Compile Include="BUS_NhanVien.cs" />
     <Compile Include="BUS_PhieuKiemKe.cs" />
     <Compile Include="BUS_PhieuNhapHang.cs" />

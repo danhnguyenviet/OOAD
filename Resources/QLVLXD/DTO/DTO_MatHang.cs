@@ -43,7 +43,7 @@ namespace DTO
             set { _MaMH = value; }
         }
 
-        public DTO_MatHang(string MaMH = "",string TenMH = "",string TenNSX = "", string MaDVT = "", float ThueVAT = 0.0)
+        public DTO_MatHang(string MaMH = "",string TenMH = "",string TenNSX = "", string MaDVT = "", float ThueVAT = 0)
         {
             this.MaMH = MaMH;
             this.TenMH = TenMH;
