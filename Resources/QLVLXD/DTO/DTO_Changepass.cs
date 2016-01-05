@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace BUS
+namespace DTO
 {
-    class BUS_HDBanHang
+    class DTO_Changepass
     {
     }
 }

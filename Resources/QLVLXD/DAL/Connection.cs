@@ -5,16 +5,21 @@ using System.Text;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Data;
+using System.Configuration;
 
 namespace DAL
 {
     public class Connection
     {
-        SqlConnection connect;
+        public SqlConnection connect;
         //Mở kết nối
         public void MoKetNoi()
+            //mầy làm tiếp đi
         {
-            connect = new SqlConnection(global::DAL.Properties.Settings.Default.QL_VLXDConnectionString);
+            
+            Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+
+            connect = new SqlConnection(ConfigurationManager.ConnectionStrings["DAL.Properties.Settings.QL_VLXDConnectionString"].ConnectionString);
             try
             {
                 connect.Open();
@@ -38,6 +43,7 @@ namespace DAL
             sqlcmd.ExecuteNonQuery();
             DongKetNoi();
         }
+
         //Thực hiện lấy dữ liệu từ database
         public DataTable GetDataTable(string strSQL)
         {

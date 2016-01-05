@@ -11,6 +11,9 @@ namespace GUI_QLVLXD
 {
     public partial class FrmMain : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+        public static string username;
+        public static string matkhau;
+        public static string quyen;
         public FrmMain()
         {
             InitializeComponent();

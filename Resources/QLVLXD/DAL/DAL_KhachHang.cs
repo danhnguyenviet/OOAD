@@ -27,5 +27,13 @@ namespace DAL
         {
             return helper.GetDataTable("select * from KHACHHANG " + dieukien);
         }
+
+        /**
+         * Lấy mã khách hàng và họ tên
+         */
+        public DataTable LayMaVaTenKhachHang()
+        {
+            return helper.GetDataTable("SELECT MaKH, HoTen FROM KhachHang");
+        }
     }
 }
