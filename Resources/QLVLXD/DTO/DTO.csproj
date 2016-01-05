@@ -46,15 +46,18 @@
     <Compile Include="DTO_BaoCaoDoanhThu.cs" />
     <Compile Include="DTO_Changepass.cs" />
     <Compile Include="DTO_DonViTinh.cs" />
+    <Compile Include="DTO_CTHoaDon.cs" />
     <Compile Include="DTO_HDBanHang.cs" />
     <Compile Include="DTO_Infosql.cs" />
     <Compile Include="DTO_KhachHang.cs" />
     <Compile Include="DTO_Login.cs" />
+    <Compile Include="DTO_LoHang.cs" />
     <Compile Include="DTO_MatHang.cs" />
     <Compile Include="DTO_NCC.cs" />
     <Compile Include="DTO_NhanVien.cs" />
     <Compile Include="DTO_PhieuKiemKe.cs" />
     <Compile Include="DTO_PhieuNhapHang.cs" />
+    <Compile Include="DTO_PhieuThanhToan.cs" />
     <Compile Include="DTO_XuatKho.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

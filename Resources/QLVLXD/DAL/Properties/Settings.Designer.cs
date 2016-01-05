@@ -28,6 +28,7 @@ namespace DAL.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DANHNGUYEN;Initial Catalog=QL_VLXD;Integrated Security=True")]
+		
         public string QL_VLXDConnectionString {
             get {
                 return ((string)(this["QL_VLXDConnectionString"]));

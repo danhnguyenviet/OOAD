@@ -257,16 +257,16 @@
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "ribbonPageGroup1";
             // 
-            // frmMain
+            // FrmMain
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.False;
             this.Appearance.BackColor = System.Drawing.Color.White;
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(821, 360);
+            this.ClientSize = new System.Drawing.Size(821, 383);
             this.Controls.Add(this.ribbonControl1);
-            this.Name = "frmMain";
+            this.Name = "FrmMain";
             this.Ribbon = this.ribbonControl1;
             this.Text = "Quản lý cửa hàng VLXD";
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();

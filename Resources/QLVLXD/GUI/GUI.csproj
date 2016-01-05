@@ -124,6 +124,11 @@
     </Compile>
     <Compile Include="FrmInfosql.designer.cs">
       <DependentUpon>FrmInfosql.cs</DependentUpon>
+    <Compile Include="FrmHoaDonBanHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHoaDonBanHang.Designer.cs">
+      <DependentUpon>FrmHoaDonBanHang.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmKhachHang.cs">
       <SubType>Form</SubType>
@@ -167,6 +172,12 @@
     <Compile Include="FrmPhieuNhap.Designer.cs">
       <DependentUpon>FrmPhieuNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmPhieuThanhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPhieuThanhToan.Designer.cs">
+      <DependentUpon>FrmPhieuThanhToan.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmThamSo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,6 +208,9 @@
     <EmbeddedResource Include="FrmDonViTinh.resx">
       <DependentUpon>FrmDonViTinh.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmHoaDonBanHang.resx">
+      <DependentUpon>FrmHoaDonBanHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmKhachHang.resx">
       <DependentUpon>FrmKhachHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -214,6 +228,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPhieuNhap.resx">
       <DependentUpon>FrmPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPhieuThanhToan.resx">
+      <DependentUpon>FrmPhieuThanhToan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmThamSo.resx">
       <DependentUpon>FrmThamSo.cs</DependentUpon>
@@ -308,6 +325,10 @@
     <ProjectReference Include="..\BUS\BUS.csproj">
       <Project>{ef930fe3-f20a-4ed7-8c0d-b758b00f6dd0}</Project>
       <Name>BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{30ec7e5e-4289-4b9b-8964-e1400a88d88b}</Project>
+      <Name>DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\DTO\DTO.csproj">
       <Project>{eae3dd2e-db34-4cf8-9c6c-ac0aa543e1ec}</Project>

@@ -48,6 +48,7 @@
     <Compile Include="BUS_Changepass.cs" />
     <Compile Include="BUS_DonViTinh.cs" />
     <Compile Include="BUS_HDBanHang.cs" />
+    <Compile Include="BUS_BanHang.cs" />
     <Compile Include="BUS_HoaDonBanHang.cs" />
     <Compile Include="BUS_Infosql.cs" />
     <Compile Include="BUS_KhachHang.cs" />
@@ -57,6 +58,7 @@
     <Compile Include="BUS_NhanVien.cs" />
     <Compile Include="BUS_PhieuKiemKe.cs" />
     <Compile Include="BUS_PhieuNhapHang.cs" />
+    <Compile Include="BUS_ThanhToan.cs" />
     <Compile Include="BUS_XuatKho.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

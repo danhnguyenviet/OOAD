@@ -35,11 +35,11 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
-            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.splitContainerControlWin641 = new DevExpress.XtraCharts.Wizard.SplitContainerControlWin64();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
+            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.splitContainerControlWin641 = new DevExpress.XtraCharts.Wizard.SplitContainerControlWin64();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachDonViTinh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
@@ -113,35 +113,6 @@
             this.groupControl3.Size = new System.Drawing.Size(730, 67);
             this.groupControl3.TabIndex = 1;
             // 
-            // groupControl1
-            // 
-            this.groupControl1.Controls.Add(this.txtTenDonViTinh);
-            this.groupControl1.Controls.Add(this.txtMaMaDonViTinh);
-            this.groupControl1.Controls.Add(this.labelControl2);
-            this.groupControl1.Controls.Add(this.labelControl1);
-            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupControl1.Location = new System.Drawing.Point(0, 0);
-            this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(730, 124);
-            this.groupControl1.TabIndex = 0;
-            this.groupControl1.Text = "Thông tin đơn vị tính";
-            // 
-            // splitContainerControlWin641
-            // 
-            this.splitContainerControlWin641.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainerControlWin641.Horizontal = false;
-            this.splitContainerControlWin641.Location = new System.Drawing.Point(0, 0);
-            this.splitContainerControlWin641.Name = "splitContainerControlWin641";
-            this.splitContainerControlWin641.Panel1.Controls.Add(this.groupControl3);
-            this.splitContainerControlWin641.Panel1.Controls.Add(this.groupControl1);
-            this.splitContainerControlWin641.Panel1.Text = "Panel1";
-            this.splitContainerControlWin641.Panel2.Controls.Add(this.groupControl2);
-            this.splitContainerControlWin641.Panel2.Text = "Panel2";
-            this.splitContainerControlWin641.Size = new System.Drawing.Size(730, 351);
-            this.splitContainerControlWin641.SplitterPosition = 194;
-            this.splitContainerControlWin641.TabIndex = 1;
-            this.splitContainerControlWin641.Text = "splitContainerControlWin641";
-            // 
             // btnXoa
             // 
             this.btnXoa.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -180,6 +151,35 @@
             this.btnThem.Text = "Thêm";
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThem.UseVisualStyleBackColor = true;
+            // 
+            // groupControl1
+            // 
+            this.groupControl1.Controls.Add(this.txtTenDonViTinh);
+            this.groupControl1.Controls.Add(this.txtMaMaDonViTinh);
+            this.groupControl1.Controls.Add(this.labelControl2);
+            this.groupControl1.Controls.Add(this.labelControl1);
+            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupControl1.Location = new System.Drawing.Point(0, 0);
+            this.groupControl1.Name = "groupControl1";
+            this.groupControl1.Size = new System.Drawing.Size(730, 124);
+            this.groupControl1.TabIndex = 0;
+            this.groupControl1.Text = "Thông tin đơn vị tính";
+            // 
+            // splitContainerControlWin641
+            // 
+            this.splitContainerControlWin641.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainerControlWin641.Horizontal = false;
+            this.splitContainerControlWin641.Location = new System.Drawing.Point(0, 0);
+            this.splitContainerControlWin641.Name = "splitContainerControlWin641";
+            this.splitContainerControlWin641.Panel1.Controls.Add(this.groupControl3);
+            this.splitContainerControlWin641.Panel1.Controls.Add(this.groupControl1);
+            this.splitContainerControlWin641.Panel1.Text = "Panel1";
+            this.splitContainerControlWin641.Panel2.Controls.Add(this.groupControl2);
+            this.splitContainerControlWin641.Panel2.Text = "Panel2";
+            this.splitContainerControlWin641.Size = new System.Drawing.Size(730, 351);
+            this.splitContainerControlWin641.SplitterPosition = 194;
+            this.splitContainerControlWin641.TabIndex = 1;
+            this.splitContainerControlWin641.Text = "splitContainerControlWin641";
             // 
             // frmDonViTinh
             // 
