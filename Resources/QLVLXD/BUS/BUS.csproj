@@ -45,9 +45,11 @@
     <Compile Include="BUS_BaoCaoTonKho.cs" />
     <Compile Include="BUS_BaoCaoDoanhThu.cs" />
     <Compile Include="BUS_Changepass.cs" />
+    <Compile Include="BUS_DonViTinh.cs" />
     <Compile Include="BUS_HDBanHang.cs" />
     <Compile Include="BUS_HoaDonBanHang.cs" />
     <Compile Include="BUS_Infosql.cs" />
+    <Compile Include="BUS_NhaCC.cs" />
     <Compile Include="BUS_KhachHang.cs" />
     <Compile Include="BUS_Login.cs" />
     <Compile Include="BUS_MatHang.cs" />

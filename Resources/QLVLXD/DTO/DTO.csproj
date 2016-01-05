@@ -45,8 +45,10 @@
     <Compile Include="DTO_BaoCaoTonKho.cs" />
     <Compile Include="DTO_BaoCaoDoanhThu.cs" />
     <Compile Include="DTO_Changepass.cs" />
+    <Compile Include="DTO_DonViTinh.cs" />
     <Compile Include="DTO_HDBanHang.cs" />
     <Compile Include="DTO_Infosql.cs" />
+    <Compile Include="DTO_NCC.cs" />
     <Compile Include="DTO_KhachHang.cs" />
     <Compile Include="DTO_Login.cs" />
     <Compile Include="DTO_MatHang.cs" />
