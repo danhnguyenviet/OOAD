@@ -5,7 +5,8 @@ using System.Text;
 
 namespace DTO
 {
-    class DTO_MatHang
+    public class DTO_MatHang
     {
+
     }
 }

@@ -5,7 +5,8 @@ using System.Text;
 
 namespace DAL
 {
-    class DAL_MatHang
+    public class DAL_MatHang
     {
+
     }
 }
