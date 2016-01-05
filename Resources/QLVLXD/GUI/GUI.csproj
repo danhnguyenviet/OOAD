@@ -124,6 +124,7 @@
     </Compile>
     <Compile Include="FrmInfosql.designer.cs">
       <DependentUpon>FrmInfosql.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmHoaDonBanHang.cs">
       <SubType>Form</SubType>
     </Compile>
