@@ -118,7 +118,6 @@ namespace GUI_QLVLXD
                 frm.Close();
             }
             FrmDonViTinh nv = new FrmDonViTinh();
-            nv.Dock = DockStyle.Fill;
             nv.MdiParent = this;
             nv.Show();
         }

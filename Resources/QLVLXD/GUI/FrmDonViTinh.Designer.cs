@@ -205,7 +205,9 @@
             this.ClientSize = new System.Drawing.Size(841, 569);
             this.Controls.Add(this.splitContainerControlWin641);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Location = new System.Drawing.Point(9, 0);
             this.Name = "FrmDonViTinh";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông Tin Đơn Vị Tính";
             this.Load += new System.EventHandler(this.FrmDonViTinh_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachDonViTinh)).EndInit();

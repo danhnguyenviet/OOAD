@@ -24,7 +24,6 @@ namespace GUI_QLVLXD
         public FrmNhaCungCap()
         {
             InitializeComponent();
-            this.Dock = DockStyle.Fill;
         }
 
         void KhoaDK()

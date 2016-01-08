@@ -249,6 +249,7 @@
             this.Controls.Add(this.splitContainerControlWin641);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmNhaCungCap";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông Tin Nhà Cung Cấp";
             this.Load += new System.EventHandler(this.FrmNhaCC_Load);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControlWin641)).EndInit();
