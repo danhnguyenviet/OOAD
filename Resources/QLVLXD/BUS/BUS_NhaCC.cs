@@ -28,5 +28,23 @@ namespace BUS
         {
             ncc.DeleteNhaCC(et);
         }
+        public string TuTinhMa()
+        {
+            int i = ncc.LayKichThuocBang() + 1;
+            string s;
+            if (i < 10)
+            {
+                s = "NCC00" + i.ToString();
+            }
+            else if (i >= 10 && i < 100)
+            {
+                s = "NCC0" + i.ToString();
+            }
+            else
+            {
+                s = "KH" + i.ToString();
+            }
+            return s;
+        }
     }
 }

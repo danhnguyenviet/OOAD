@@ -27,5 +27,10 @@ namespace DAL
         {
             return helper.GetDataTable("select * from NhaCC " + dieukien);
         }
+        public int LayKichThuocBang()
+        {
+            DataTable dt = helper.GetDataTable("Select * from NhaCC");
+            return dt.Rows.Count;
+        }
     }
 }

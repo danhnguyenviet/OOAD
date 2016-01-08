@@ -32,7 +32,7 @@ namespace BUS
          */
         public DataTable LayDsMaVaTenNv()
         {
-            return this._dal_NhanVien.LayMaVaTenNhanVien();
+            return null;// this._dal_NhanVien.LayMaVaTenNhanVien();
         }
 
         /**
@@ -40,7 +40,7 @@ namespace BUS
          */
         public DataTable LayDsMaVaTenKh()
         {
-            return this._dal_KhachHang.LayMaVaTenKhachHang();
+            return null;//this._dal_KhachHang.LayMaVaTenKhachHang();
         }
 
         /**
@@ -67,13 +67,13 @@ namespace BUS
         // Lấy danh sách nhân viên bán hàng
         public DataTable LayDsNhanVienBh()
         {
-            return this._dal_NhanVien.LayMaVaTenNhanVien();
+            return null;// this._dal_NhanVien.LayMaVaTenNhanVien();
         }
 
         // Lấy danh sách khách hàng
         public DataTable LayDsKhachHang()
         {
-            return this._dal_KhachHang.LayMaVaTenKhachHang();
+            return null;// this._dal_KhachHang.LayMaVaTenKhachHang();
         }
 
         // Lấy danh sách hàng tồn hiện tại

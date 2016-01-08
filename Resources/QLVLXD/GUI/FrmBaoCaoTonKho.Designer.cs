@@ -110,7 +110,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(760, 47);
+            this.panel1.Size = new System.Drawing.Size(843, 47);
             this.panel1.TabIndex = 2;
             // 
             // reportViewer1
@@ -121,16 +121,17 @@
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "GUI_QLVLXD.BaoCaoTonKho.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(-1, 53);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(761, 414);
+            this.reportViewer1.Size = new System.Drawing.Size(844, 517);
             this.reportViewer1.TabIndex = 0;
             // 
             // FrmBaoCaoTonKho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(760, 468);
+            this.ClientSize = new System.Drawing.Size(843, 572);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.reportViewer1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmBaoCaoTonKho";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.FrmBaoCaoTonKho_Load);

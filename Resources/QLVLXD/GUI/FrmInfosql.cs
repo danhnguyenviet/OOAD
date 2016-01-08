@@ -55,9 +55,11 @@ namespace GUI_QLVLXD
         
             if (HoanThanh)
             {
-                Hide();
-                Application.Restart();
-                MessageBox.Show("Đã lưu thông tin cơ sở dữ liệu thành công \n Nhấn ok để khởi động lại phần mềm", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Close();
+                DialogResult rs = MessageBox.Show("Đã lưu thông tin cơ sở dữ liệu thành công \n Nhấn ok để khởi động lại phần mềm", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if(rs == DialogResult.OK)
+                    Application.Restart();
+                
             }
             else
                 MessageBox.Show("Không Thể Lưu Cài Đặt Mới.\nKiểm Tra Lại Thông Tin Cài Đặt.\n", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);

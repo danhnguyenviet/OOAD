@@ -13,7 +13,7 @@ namespace DTO
 
         private string _DiaChi;
 
-        private DateTime _ngayCapThe;
+        private string _soDienThoai;
 
         public string MaKH
         {
@@ -54,25 +54,25 @@ namespace DTO
             }
         }
 
-        public DateTime NgayCapThe
+        public string SoDienThoai
         {
             get
             {
-                return _ngayCapThe;
+                return _soDienThoai;
             }
 
             set
             {
-                _ngayCapThe = value;
+                _soDienThoai = value;
             }
         }
 
-        public DTO_KhachHang(string MaKH="",string HoTen="",string DiaChi="", DateTime NgayCapThe= new DateTime())
+        public DTO_KhachHang(string MaKH = "", string HoTen = "", string DiaChi = "", string SoDienThoai = "")
         {
             this.MaKH = MaKH;
             this.HoTen = HoTen;
             this.DiaChi = DiaChi;
-            this.NgayCapThe = NgayCapThe;
+            this.SoDienThoai = SoDienThoai;
         }
     }
 }

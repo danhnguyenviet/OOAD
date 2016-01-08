@@ -83,6 +83,7 @@
     </Compile>
     <Compile Include="FrmChiTietKiemke.Designer.cs">
       <DependentUpon>FrmChiTietKiemke.cs</DependentUpon>
+    </Compile>
     <Compile Include="BaoCaoCongNoKH.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -162,6 +163,7 @@
     </Compile>
     <Compile Include="FrmKiemKe.Designer.cs">
       <DependentUpon>FrmKiemKe.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -231,6 +233,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmChiTietKiemke.resx">
       <DependentUpon>FrmChiTietKiemke.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaoCaoCongNoKH.rdlc" />
     <EmbeddedResource Include="BaoCaoDoanhThu.rdlc" />
     <EmbeddedResource Include="BaoCaoKinhDoanh.rdlc" />
@@ -248,7 +251,7 @@
       <DependentUpon>FrmBaoCaoTonKho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmChangepass.resx">
-      <DependentUpon>frmChangepass.cs</DependentUpon
+      <DependentUpon>frmChangepass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDonViTinh.resx">
       <DependentUpon>FrmDonViTinh.cs</DependentUpon>

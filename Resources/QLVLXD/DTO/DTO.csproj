@@ -48,7 +48,6 @@
     <Compile Include="DTO_Changepass.cs" />
     <Compile Include="DTO_DonViTinh.cs" />
     <Compile Include="DTO_CTHoaDon.cs" />
-
     <Compile Include="DTO_HDBanHang.cs" />
     <Compile Include="DTO_Infosql.cs" />
     <Compile Include="DTO_KhachHang.cs" />

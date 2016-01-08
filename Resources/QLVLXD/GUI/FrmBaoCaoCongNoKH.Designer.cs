@@ -70,7 +70,7 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(561, 19);
+            this.labelControl3.Location = new System.Drawing.Point(450, 13);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(52, 13);
             this.labelControl3.TabIndex = 11;
@@ -78,7 +78,7 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(280, 19);
+            this.labelControl2.Location = new System.Drawing.Point(169, 13);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(45, 13);
             this.labelControl2.TabIndex = 12;
@@ -87,7 +87,7 @@
             // datetimeFrom
             // 
             this.datetimeFrom.EditValue = new System.DateTime(2016, 1, 1, 20, 45, 34, 0);
-            this.datetimeFrom.Location = new System.Drawing.Point(342, 16);
+            this.datetimeFrom.Location = new System.Drawing.Point(231, 10);
             this.datetimeFrom.Name = "datetimeFrom";
             this.datetimeFrom.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -101,7 +101,7 @@
             // datetimeTo
             // 
             this.datetimeTo.EditValue = new System.DateTime(2016, 1, 1, 20, 46, 56, 0);
-            this.datetimeTo.Location = new System.Drawing.Point(619, 16);
+            this.datetimeTo.Location = new System.Drawing.Point(508, 10);
             this.datetimeTo.Name = "datetimeTo";
             this.datetimeTo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -127,11 +127,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1066, 552);
+            this.ClientSize = new System.Drawing.Size(841, 568);
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmBaoCaoCongNoKH";
-            this.Text = "FrmBaoCaoCongNoKH";
+            this.Text = "Báo Cáo Công Nợ Khách Hàng";
             this.Load += new System.EventHandler(this.FrmBaoCaoCongNoKH_Load);
             ((System.ComponentModel.ISupportInitialize)(this.BaoCaoCongNoKHBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BaoCaoCongNoKH)).EndInit();

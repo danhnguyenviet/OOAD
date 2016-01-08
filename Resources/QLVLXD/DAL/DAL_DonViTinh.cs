@@ -13,19 +13,24 @@ namespace DAL
 
         public void InsertDonViTinh(DTO_DonViTinh DvtDTO)
         {
-            helper.ThucHienCauLenhSQL("INSERT INTO DonViTinh (TenTS, GiaTri) VALUES (N'" + DvtDTO.TenTS + "')");
+            helper.ThucHienCauLenhSQL("INSERT INTO DonViTinh (MaDVT, TenDVT) VALUES (N'" + DvtDTO.TenTS + "',N'"+DvtDTO.GiaTri+"')");
         }
         public void UpdateDonViTinh(DTO_DonViTinh DvtDTO)
         {
-            helper.ThucHienCauLenhSQL("UPDATE DonViTinh SET GiaTri =N'" + DvtDTO.GiaTri + "' where MaKH = N'" + DvtDTO.TenTS + "'");
+            helper.ThucHienCauLenhSQL("UPDATE DonViTinh SET TenDVT =N'" + DvtDTO.GiaTri + "' where MaDVT = N'" + DvtDTO.TenTS + "'");
         }
         public void DeleteDonViTinh(DTO_DonViTinh DvtDTO)
         {
-            helper.ThucHienCauLenhSQL("DELETE from DonViTinh Where MaKH=N'" + DvtDTO.TenTS + "'");
+            helper.ThucHienCauLenhSQL("DELETE from DonViTinh Where MaDVT=N'" + DvtDTO.TenTS + "'");
         }
         public DataTable TaobangDonViTinh(string dieukien)
         {
             return helper.GetDataTable("select * from DonViTinh " + dieukien);
+        }
+        public int LayKichThuocBang()
+        {
+            DataTable dt = helper.GetDataTable("Select * from DonViTinh");
+            return dt.Rows.Count;
         }
     }
 }

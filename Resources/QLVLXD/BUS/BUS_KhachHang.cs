@@ -18,15 +18,34 @@ namespace BUS
         public void ThemdulieuKhachHang(DTO_KhachHang et)
         {
             //truyền vào đối tượng thôi.
-            kh.InsertKhachHang(et);
+            kh.ThemKhachHang(et);
         }
         public void SuadulieuKhachHang(DTO_KhachHang et)
         {
-            kh.UpdateKhachHang(et);
+            kh.CapNhatKhachHang(et);
         }
         public void XoadulieuKhachHang(DTO_KhachHang et)
         {
-            kh.DeleteKhachHang(et);
+            kh.XoaKhachHang(et);
+        }
+
+        public string TuTinhMa()
+        {
+            int i = kh.LayKichThuocBang() + 1;
+            string s;
+            if (i < 10)
+            {
+                s = "KH00" + i.ToString();
+            }
+            else if (i >= 10 && i < 100)
+            {
+                s = "KH0" + i.ToString();
+            }
+            else
+            {
+                s = "KH" + i.ToString();
+            }
+            return s;
         }
     }
 }

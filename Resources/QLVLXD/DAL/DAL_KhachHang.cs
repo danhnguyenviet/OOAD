@@ -11,15 +11,15 @@ namespace DAL
     {
         public Connection helper = new Connection();
 
-        public void InsertKhachHang(DTO_KhachHang khDTO)
+        public void ThemKhachHang(DTO_KhachHang khDTO)
         {
-            helper.ThucHienCauLenhSQL("INSERT INTO KHACHHANG (MaKH, HoTen, DiaChi, NgayCapThe) VALUES (N'" + khDTO.MaKH + "',N'" + khDTO.HoTen + "',N'" + khDTO.DiaChi + "',N'" + khDTO.NgayCapThe  + "')");
+            helper.ThucHienCauLenhSQL("INSERT INTO KHACHHANG (MaKH, HoTen, DiaChi, Sdt) VALUES (N'" + khDTO.MaKH + "',N'" + khDTO.HoTen + "',N'" + khDTO.DiaChi + "',N'" + khDTO.SoDienThoai + "')");
         }
-        public void UpdateKhachHang(DTO_KhachHang khDTO)
+        public void CapNhatKhachHang(DTO_KhachHang khDTO)
         {
-            helper.ThucHienCauLenhSQL("UPDATE KHACHHANG SET HoTen =N'" + khDTO.HoTen + "', DiaChi =N'" + khDTO.DiaChi + "', NgayCapThe =N'" + khDTO.NgayCapThe  + "' where MaKH = N'" + khDTO.MaKH + "'");
+            helper.ThucHienCauLenhSQL("UPDATE KHACHHANG SET HoTen =N'" + khDTO.HoTen + "', DiaChi = N'" + khDTO.DiaChi + "', Sdt = N'" + khDTO.SoDienThoai + "' where MaKH = N'" + khDTO.MaKH + "'");
         }
-        public void DeleteKhachHang(DTO_KhachHang khDTO)
+        public void XoaKhachHang(DTO_KhachHang khDTO)
         {
             helper.ThucHienCauLenhSQL("DELETE from KHACHHANG Where MaKH=N'" + khDTO.MaKH + "'");
         }
@@ -27,13 +27,10 @@ namespace DAL
         {
             return helper.GetDataTable("select * from KHACHHANG " + dieukien);
         }
-
-        /**
-         * Lấy mã khách hàng và họ tên
-         */
-        public DataTable LayMaVaTenKhachHang()
+        public int LayKichThuocBang()
         {
-            return helper.GetDataTable("SELECT MaKH, HoTen FROM KhachHang");
+            DataTable dt = helper.GetDataTable("Select * from KhachHang");
+            return dt.Rows.Count;
         }
     }
 }
