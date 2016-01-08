@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.BaoCaoCongNoKHBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.BaoCaoCongNoKHBindingSource = new System.Windows.Forms.BindingSource();
             this.BaoCaoCongNoKH = new GUI_QLVLXD.BaoCaoCongNoKH();
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
@@ -132,6 +131,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmBaoCaoCongNoKH";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Báo Cáo Công Nợ Khách Hàng";
             this.Load += new System.EventHandler(this.FrmBaoCaoCongNoKH_Load);
             ((System.ComponentModel.ISupportInitialize)(this.BaoCaoCongNoKHBindingSource)).EndInit();

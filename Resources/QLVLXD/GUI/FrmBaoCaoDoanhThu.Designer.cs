@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.BaoCaoDoanhThuBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.BaoCaoDoanhThuBindingSource = new System.Windows.Forms.BindingSource();
             this.BaoCaoDoanhThu = new GUI_QLVLXD.BaoCaoDoanhThu();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -106,6 +105,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmBaoCaoDoanhThu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Báo Cáo Doanh Thu Trong Tháng";
             this.Load += new System.EventHandler(this.FrmBaoCaoDoanhThu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.BaoCaoDoanhThuBindingSource)).EndInit();

@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.BaoCaoTonKhoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.BaoCaoTonKhoBindingSource = new System.Windows.Forms.BindingSource();
             this.BaoCaoTonKho = new GUI_QLVLXD.BaoCaoTonKho();
             this.datetimeTo = new DevExpress.XtraEditors.DateEdit();
             this.datetimeFrom = new DevExpress.XtraEditors.DateEdit();
@@ -133,6 +132,7 @@
             this.Controls.Add(this.reportViewer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmBaoCaoTonKho";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.FrmBaoCaoTonKho_Load);
             ((System.ComponentModel.ISupportInitialize)(this.BaoCaoTonKhoBindingSource)).EndInit();
