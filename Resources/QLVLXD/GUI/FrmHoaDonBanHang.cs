@@ -19,6 +19,8 @@ namespace GUI_QLVLXD
         private DataTable _dsMaVaTenNv;
         private DataTable _dsMaVaTenKh;
         private DataTable _dsMaVaTenMatHang;
+        private DataTable _dsHdbh;
+        private DataTable _dsCthd;
 
         public FrmHoaDonBanHang()
         {
@@ -47,6 +49,15 @@ namespace GUI_QLVLXD
             }
 
             this.dateNgayLap.Text = DateTime.Now.ToShortDateString();
+
+            // Load tất cả các hóa đơn bán hàng
+            int i = 1;
+            this._dsHdbh = this._bus_BanHang.LayTatCaHdbh();
+            foreach (DataRow row in this._dsHdbh.Rows)
+            {
+                this.dgvDsHdbh.Rows.Add(i, row["MaHD"], row["MaNV"], row["MaKH"], row["ThoiGianLap"], row["TongTien"]);
+                i++;
+            }
         }
 
         private bool TrungCthd()
@@ -405,6 +416,51 @@ namespace GUI_QLVLXD
             if (!(Char.IsDigit(e.KeyChar) || Char.IsControl(e.KeyChar)))
             {
                 e.Handled = true;
+            }
+        }
+
+        private void dgvDsHdbh_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dateNgayLap.Enabled = false;
+            cbTenNvbh.Enabled = false;
+            cbTenMatHang.Enabled = false;
+            txtTraTruoc.Enabled = false;
+            txtTraTruoc.Text = "";
+            txtConNo.Text = "";
+
+            int rowIndex = dgvDsHdbh.CurrentCell.RowIndex;
+            txtMaHoaDon.Text = dgvDsHdbh.Rows[rowIndex].Cells[1].Value.ToString();
+            dateNgayLap.Text = DateTime.Now.ToShortDateString();
+
+            foreach (DataRow row in this._dsMaVaTenNv.Rows)
+            {
+                if (row["MaNV"].ToString() == dgvDsHdbh.Rows[rowIndex].Cells[2].Value.ToString())
+                {
+                    cbTenNvbh.Text = row["TenNV"].ToString();
+                }
+            }
+
+            foreach (DataRow row in this._dsMaVaTenKh.Rows)
+            {
+                if (row["MaKH"].ToString() == dgvDsHdbh.Rows[rowIndex].Cells[3].Value.ToString())
+                {
+                    cbTenKhachHang.Text = row["TenNV"].ToString();
+                }
+            }
+
+            txtTongTien.Text = dgvDsHdbh.Rows[rowIndex].Cells[5].Value.ToString();
+
+            dgvDanhSachMatHang.Rows.Clear();
+            this._dsCthd = this._bus_BanHang.LayCthdbhTheoMa(dgvDsHdbh.Rows[rowIndex].Cells[1].Value.ToString());
+            int i = 1;
+            foreach (DataRow row in this._dsCthd.Rows)
+            {
+                string tenMh = this._bus_BanHang.LayTenMatHangTheoMaLh(row["MaLH"].ToString());
+                string giaBan = this._bus_BanHang.LayGiaBan(tenMh);
+
+                dgvDanhSachMatHang.Rows.Add(i, tenMh, row["SLBan"], giaBan,
+                    Double.Parse(giaBan) * Double.Parse(row["SLBan"].ToString()));
+                i++;
             }
         }
 

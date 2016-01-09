@@ -32,9 +32,27 @@ namespace DAL
          * Lấy thông tin chi tiết hóa đơn bán hàng theo mã hóa đơn
          * @string: dieuKien
          */
-        public DataTable LayCtHdBanHang(string maHd)
+        public DataTable LayCtHdbhTheoMaHd(string maHd)
         {
             return connection.GetDataTable("SELECT * FROM ChiTietHoaDon WHERE MaHD='" + maHd + "'");
+        }
+
+        /**
+         * Lấy tên mặt hàng theo mã lô hàng
+         */
+        public string LayTenMatHangTheoMaLh(string maLh)
+        {
+            DataTable dt = connection.GetDataTable("SELECT TenMH FROM MatHang WHERE MaMH IN (SELECT MaLH FROM LoHang WHERE MaLH='" + maLh + "')");
+            return dt.Rows[0]["TenMH"].ToString();
+        }
+
+        /**
+         * Lấy giá bán theo mã lô hàng
+         */
+        public string LayGiaBanTheoMaLh(string maLh)
+        {
+            DataTable dt = connection.GetDataTable("SELECT GiaBan FROM LoHang WHERE MaLH='" + maLh + "'");
+            return dt.Rows[0]["GiaBan"].ToString();
         }
     }
 }

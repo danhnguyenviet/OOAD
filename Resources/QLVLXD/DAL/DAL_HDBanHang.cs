@@ -58,5 +58,15 @@ namespace DAL
         {
             return connection.GetDataTable("SELECT * FROM HoaDon " + dieuKien);
         }
+
+        /**
+         * Load tất cả các hóa đơn bán hàng
+         */
+        public DataTable LayTatCaHdbh()
+        {
+            return connection.GetDataTable("SELECT * FROM HoaDon");
+        }
+
+
     }
 }

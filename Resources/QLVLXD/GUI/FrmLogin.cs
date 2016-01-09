@@ -52,7 +52,7 @@ namespace GUI_QLVLXD
             {
                 FrmMain.username = dangnhap_datatable.Rows[0]["TenDangNhap"].ToString();
                 FrmMain.quyen = dangnhap_datatable.Rows[0]["Quyen"].ToString();
-                frmChangepass form = new frmChangepass();
+                FrmMain form = new FrmMain();
                 form.Show();
                 Hide();
             }

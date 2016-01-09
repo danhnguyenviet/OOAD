@@ -61,5 +61,13 @@ namespace DAL
                 "ON HoaDon.MaHD=A.MaHD " +
                 "WHERE A.SoTienNop < HoaDon.TongTien");
         }
+
+        /**
+         * Lấy tất cả các phiếu thanh toán hiện có
+         */
+        public DataTable LayTatCaPtt()
+        {
+            return connection.GetDataTable("SELECT * FROM PhieuThanhToan");
+        }
     }
 }

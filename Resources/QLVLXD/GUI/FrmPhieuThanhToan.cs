@@ -19,6 +19,7 @@ namespace GUI_QLVLXD
         private BUS_ThanhToan _bus_ThanhToan;
         private DataTable _dsMaVaTenNv;
         private DataTable _dsHdChuaTtXong;
+        private DataTable _dsPttHienTai;
 
         public FrmPhieuThanhToan()
         {
@@ -41,6 +42,15 @@ namespace GUI_QLVLXD
             }
 
             this.dateNgayNop.Text = DateTime.Now.ToShortDateString();
+
+            // Load tất cả các phiếu thanh toán lên datagridview
+            int i = 1;
+            this._dsPttHienTai = this._bus_ThanhToan.LayTatCaPtt();
+            foreach (DataRow row in this._dsPttHienTai.Rows)
+            {
+                dgvPhieuThanhToan.Rows.Add(i, row["MaPhieuTT"], row["SoTienNop"], row["ThoiGianNop"], row["MaHD"], row["MaNV"]);
+                i++;
+            }
         }
 
         /**
@@ -131,16 +141,16 @@ namespace GUI_QLVLXD
         {
             try
             {
-                if (Double.Parse(txtSoTienNop.Text) <= Double.Parse(lbConNo.Text))
-                {
+                //if (Double.Parse(txtSoTienNop.Text) <= Double.Parse(lbConNo.Text))
+                //{
                     txtConNo.Text = (Double.Parse(lbConNo.Text) - Double.Parse(txtSoTienNop.Text)).ToString();
-                }
-                else
-                {
-                    //MessageBox.Show("Số tiền trả không được lớn hơn tổng tiền!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    txtSoTienNop.Text = txtSoTienNop.Text.Remove(txtSoTienNop.Text.Length - 1, 1);
-                    txtSoTienNop.Refresh();
-                }
+                //}
+                //else
+                //{
+                //    //MessageBox.Show("Số tiền trả không được lớn hơn tổng tiền!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //    txtSoTienNop.Text = txtSoTienNop.Text.Remove(txtSoTienNop.Text.Length - 1, 1);
+                //    txtSoTienNop.Refresh();
+                //}
 
                 if (txtSoTienNop.Text.Length > 9)
                 {
@@ -154,6 +164,26 @@ namespace GUI_QLVLXD
                 txtConNo.Text = lbConNo.Text;
                 cbMaHoaDon.Focus();
             }
+        }
+
+        private bool TrungMaHd()
+        {
+            try
+            {
+                foreach (DataGridViewRow row in dgvPhieuThanhToan.Rows)
+                {
+                    if (txtMaPhieuThanhToan.Text.Equals(row.Cells[1].Value.ToString()))
+                    {
+                        return true;
+                    }
+                }
+                return false;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            return true;
         }
 
         private void txtSoTienNop_KeyPress(object sender, KeyPressEventArgs e)
@@ -188,28 +218,88 @@ namespace GUI_QLVLXD
 
         private void btnLuuPhieuThanhToan_Click(object sender, EventArgs e)
         {
-            if (PhieuThanhToanHopLe())
+            if (!TrungMaHd())
             {
-                if (Double.Parse(txtSoTienNop.Text) <= Double.Parse(lbConNo.Text))
+                if (PhieuThanhToanHopLe())
                 {
-                    DTO_PhieuThanhToan ptt = new DTO_PhieuThanhToan(txtMaPhieuThanhToan.Text, txtSoTienNop.Text,
-                    DateTime.Parse(dateNgayNop.Text), cbMaHoaDon.Text, lbMaNv.Text);
-                    this._bus_ThanhToan.LuuPhieuThanhToan(ptt);
+                    if (Double.Parse(txtSoTienNop.Text) <= Double.Parse(lbConNo.Text))
+                    {
+                        DTO_PhieuThanhToan ptt = new DTO_PhieuThanhToan(txtMaPhieuThanhToan.Text, txtSoTienNop.Text,
+                        DateTime.Parse(dateNgayNop.Text), cbMaHoaDon.Text, lbMaNv.Text);
+                        this._bus_ThanhToan.LuuPhieuThanhToan(ptt);
 
-                    MessageBox.Show("Lưu thành công!", "Thông báo");
+                        MessageBox.Show("Lưu thành công!", "Thông báo");
 
-                    ResetForm();
+                        ResetForm();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Vui lòng kiểm tra số tiền nộp!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        txtSoTienNop.Focus();
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Vui lòng kiểm tra số tiền nộp!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    txtSoTienNop.Focus();
+                    MessageBox.Show("Phiếu thanh toán không hợp lệ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    dateNgayNop.Focus();
                 }
             }
             else
             {
-                MessageBox.Show("Phiếu thanh toán không hợp lệ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                dateNgayNop.Focus();
+                DialogResult result = MessageBox.Show("Bạn muốn tạo mới phiếu thanh toán!", "Thông báo", 
+                    MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (result == DialogResult.OK)
+                {
+                    txtMaPhieuThanhToan.Enabled = true;
+                    dateNgayNop.Enabled = true;
+                    cbTenNhanVien.Enabled = true;
+                    txtMaPhieuThanhToan.Enabled = true;
+                    cbMaHoaDon.Enabled = true;
+                    txtSoTienNop.Enabled = true;
+                    lbMaNv.Visible = false;
+                    ResetForm();
+                }
+            }
+        }
+
+        private void dgvPhieuThanhToan_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtMaPhieuThanhToan.Enabled = false;
+            dateNgayNop.Enabled = false;
+            cbTenNhanVien.Enabled = false;
+            txtMaPhieuThanhToan.Enabled = false;
+            cbMaHoaDon.Enabled = false;
+            txtSoTienNop.Enabled = false;
+
+            int rowIndex = dgvPhieuThanhToan.CurrentCell.RowIndex;
+            txtMaPhieuThanhToan.Text = dgvPhieuThanhToan.Rows[rowIndex].Cells[1].Value.ToString();
+            dateNgayNop.Text = dgvPhieuThanhToan.Rows[rowIndex].Cells[3].Value.ToString();
+            cbMaHoaDon.Text = dgvPhieuThanhToan.Rows[rowIndex].Cells[4].Value.ToString();
+            lbMaNv.Text = dgvPhieuThanhToan.Rows[rowIndex].Cells[5].Value.ToString();
+            lbMaNv.Visible = true;
+            lbConNo.Text = "0";
+            txtSoTienNop.Text = dgvPhieuThanhToan.Rows[rowIndex].Cells[2].Value.ToString();
+
+            foreach (DataRow row in this._dsMaVaTenNv.Rows)
+            {
+                if (row["MaNV"].ToString() == lbMaNv.Text)
+                {
+                    cbTenNhanVien.Text = row["TenNV"].ToString();
+                    break;
+                }
+            }
+
+            this._dsHdChuaTtXong = this._bus_ThanhToan.LayDshdChuaTtXong();
+            foreach (DataRow row in this._dsHdChuaTtXong.Rows)
+            {
+                if (row["MaHD"].ToString() == cbMaHoaDon.Text)
+                {
+                    lbConNo.Text = txtConNo.Text = (Double.Parse(row["TongTien"].ToString()) - Double.Parse(row["SoTienNop"].ToString())).ToString();
+                }
+                else
+                {
+                    lbConNo.Text = txtConNo.Text = "0";
+                }
             }
         }
     }

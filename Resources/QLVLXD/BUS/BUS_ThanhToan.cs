@@ -33,5 +33,13 @@ namespace BUS
         {
             return this._phieuThanhToan.ThemMoiPhieuThanhToan(phieuThanhToan);
         }
+
+        /**
+         * Lấy tất cẩ phiếu thanh toán
+         */
+        public DataTable LayTatCaPtt()
+        {
+            return this._phieuThanhToan.LayTatCaPtt();
+        }
     }
 }

@@ -122,6 +122,7 @@
             this.btnPhieuThanhToan.Caption = "Phiếu thanh toán";
             this.btnPhieuThanhToan.Id = 6;
             this.btnPhieuThanhToan.Name = "btnPhieuThanhToan";
+            this.btnPhieuThanhToan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPhieuThanhToan_ItemClick);
             // 
             // barButtonItem1
             // 

@@ -18,5 +18,11 @@ namespace GUI_QLVLXD
         {
             InitializeComponent();
         }
+
+        private void btnPhieuThanhToan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmPhieuThanhToan frmPtt = new FrmPhieuThanhToan();
+            frmPtt.Show();
+        }
     }
 }

@@ -128,5 +128,33 @@ namespace BUS
             this._dal_PhieuThanhToan.ThemMoiPhieuThanhToan(phieuThanhToan);
             return true;
         }
+
+        // Lấy tất cả hóa đơn bán hàng
+        public DataTable LayTatCaHdbh()
+        {
+            return this._dal_HDBanHang.LayTatCaHdbh();
+        }
+
+        // Lấy chi tiết hóa đơn bán hàng theo mã
+        public DataTable LayCthdbhTheoMa(string maHd)
+        {
+            return this._dal_CTHoaDon.LayCtHdbhTheoMaHd(maHd);
+        }
+
+        /**
+         * Lấy tên mặt hàng theo mã lô hàng
+         */
+        public string LayTenMatHangTheoMaLh(string maLh)
+        {
+            return this._dal_CTHoaDon.LayTenMatHangTheoMaLh(maLh);
+        }
+
+        /**
+         * Lấy giá bán theo mã lô hàng
+         */
+        public string LayGiaBanTheoMaLh(string maLh)
+        {
+            return this._dal_CTHoaDon.LayGiaBanTheoMaLh(maLh);
+        }
     }
 }
