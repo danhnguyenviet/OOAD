@@ -118,17 +118,16 @@ namespace GUI_QLVLXD
                     return true;
                 }
             }
+
+            if (cbTenMatHang.Text != "" && txtSoLuongBan.Text != "")
+            {
+                return true;
+            }
             else
             {
-                if (cbTenMatHang.Text != "" && txtSoLuongBan.Text != "")
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+                return false;
             }
+
         }
 
         /**
@@ -212,7 +211,7 @@ namespace GUI_QLVLXD
             {
                 dgvDanhSachMatHang.Rows.RemoveAt(0);
             }
-            
+
             txtTongTien.Text = String.Empty;
             txtTraTruoc.Text = String.Empty;
             txtConNo.Text = String.Empty;
@@ -330,26 +329,29 @@ namespace GUI_QLVLXD
             {
                 if (ChiTietHdHopLe())
                 {
-                    if (this._bus_BanHang.SoLuongBanHopLe(cbTenMatHang.Text, Int32.Parse(txtSoLuongBan.Text)))
+                    if (txtSoLuongBan.Text != "")
                     {
-                        double giaBan = Double.Parse(this._bus_BanHang.LayGiaBan(this.cbTenMatHang.Text));
-                        dgvDanhSachMatHang.Rows.Add(this._stt + 1, this.cbTenMatHang.Text, this.txtSoLuongBan.Text, giaBan, giaBan * Double.Parse(txtSoLuongBan.Text), lbMaMh.Text);
-
-                        this._stt++;
-
-                        double tongTien = 0;
-                        foreach (DataGridViewRow row in dgvDanhSachMatHang.Rows)
+                        if (this._bus_BanHang.SoLuongBanHopLe(cbTenMatHang.Text, Int32.Parse(txtSoLuongBan.Text)))
                         {
-                            tongTien += Double.Parse(row.Cells[4].Value.ToString());
-                        }
+                            double giaBan = Double.Parse(this._bus_BanHang.LayGiaBan(this.cbTenMatHang.Text));
+                            dgvDanhSachMatHang.Rows.Add(this._stt + 1, this.cbTenMatHang.Text, this.txtSoLuongBan.Text, giaBan, giaBan * Double.Parse(txtSoLuongBan.Text), lbMaMh.Text);
 
-                        txtTongTien.Text = txtConNo.Text = tongTien.ToString();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Số lượng bán quá lớn hoặc hàng đã hết!\n Vui lòng kiểm tra lại!", "Thông báo",
-                            MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        txtSoLuongBan.Focus();
+                            this._stt++;
+
+                            double tongTien = 0;
+                            foreach (DataGridViewRow row in dgvDanhSachMatHang.Rows)
+                            {
+                                tongTien += Double.Parse(row.Cells[4].Value.ToString());
+                            }
+
+                            txtTongTien.Text = txtConNo.Text = tongTien.ToString();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Số lượng bán quá lớn hoặc hàng đã hết!\n Vui lòng kiểm tra lại!", "Thông báo",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            txtSoLuongBan.Focus();
+                        }
                     }
                 }
                 else
@@ -387,16 +389,16 @@ namespace GUI_QLVLXD
         {
             try
             {
-                if (Double.Parse(txtTraTruoc.Text) <= Double.Parse(txtTongTien.Text))
-                {
-                    txtConNo.Text = (Double.Parse(txtTongTien.Text) - Double.Parse(txtTraTruoc.Text)).ToString();
-                }
-                else
-                {
-                    //MessageBox.Show("Số tiền trả không được lớn hơn tổng tiền!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    txtTraTruoc.Text = txtTraTruoc.Text.Remove(txtTraTruoc.Text.Length - 1, 1);
-                    txtTraTruoc.Refresh();
-                }
+                //if (Double.Parse(txtTraTruoc.Text) <= Double.Parse(txtTongTien.Text))
+                //{
+                txtConNo.Text = (Double.Parse(txtTongTien.Text) - Double.Parse(txtTraTruoc.Text)).ToString();
+                //}
+                //else
+                //{
+                //    //MessageBox.Show("Số tiền trả không được lớn hơn tổng tiền!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //    txtTraTruoc.Text = txtTraTruoc.Text.Remove(txtTraTruoc.Text.Length - 1, 1);
+                //    txtTraTruoc.Refresh();
+                //}
 
                 if (txtTraTruoc.Text.Length > 9)
                 {
@@ -425,12 +427,13 @@ namespace GUI_QLVLXD
             cbTenNvbh.Enabled = false;
             cbTenMatHang.Enabled = false;
             txtTraTruoc.Enabled = false;
-            txtTraTruoc.Text = "";
-            txtConNo.Text = "";
+            txtTraTruoc.Text = "0";
+            txtConNo.Text = "0";
 
             int rowIndex = dgvDsHdbh.CurrentCell.RowIndex;
             txtMaHoaDon.Text = dgvDsHdbh.Rows[rowIndex].Cells[1].Value.ToString();
             dateNgayLap.Text = DateTime.Now.ToShortDateString();
+            txtTongTien.Text = dgvDsHdbh.Rows[rowIndex].Cells[5].Value.ToString();
 
             foreach (DataRow row in this._dsMaVaTenNv.Rows)
             {
@@ -444,11 +447,9 @@ namespace GUI_QLVLXD
             {
                 if (row["MaKH"].ToString() == dgvDsHdbh.Rows[rowIndex].Cells[3].Value.ToString())
                 {
-                    cbTenKhachHang.Text = row["TenNV"].ToString();
+                    cbTenKhachHang.Text = row["HoTen"].ToString();
                 }
             }
-
-            txtTongTien.Text = dgvDsHdbh.Rows[rowIndex].Cells[5].Value.ToString();
 
             dgvDanhSachMatHang.Rows.Clear();
             this._dsCthd = this._bus_BanHang.LayCthdbhTheoMa(dgvDsHdbh.Rows[rowIndex].Cells[1].Value.ToString());
@@ -462,6 +463,9 @@ namespace GUI_QLVLXD
                     Double.Parse(giaBan) * Double.Parse(row["SLBan"].ToString()));
                 i++;
             }
+
+            
+
         }
 
     }
