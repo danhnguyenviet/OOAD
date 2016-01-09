@@ -54,5 +54,34 @@ namespace DAL
             DongKetNoi();
             return dt;
         }
+
+        public string SearchDaTaGrid(string key, string table, string MaColumnName)
+        {
+            int Count = 0;
+            string Ma = "";
+            DataTable dt = new DataTable();//tao bang tam de luu
+            dt = GetDataTable("Select " + MaColumnName + " From " + table);
+            for (int i = 1; true; i++)
+            {
+                for (int j = 0; j < dt.Rows.Count; j++)
+                {
+                    if (dt.Rows[j][MaColumnName].ToString() != key + "" + i)
+                    {
+                        Count++;//dem so lan khac
+                    }
+                    else
+                    {
+                        Count = 0;
+                        break;
+                    }
+                }
+                if (Count == dt.Rows.Count)// new so lan khac bang so hang cua bang, nghia la khong co dong nao trung thi tu dong add
+                {
+                    Ma = key + "" + i;
+                    break;
+                }
+            }
+            return Ma;
+        }
     }
 }
