@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DTO;
-using DAL;
 using BUS;
 
 namespace GUI_QLVLXD
@@ -19,7 +18,6 @@ namespace GUI_QLVLXD
         bool Them;
         DTO_NhanVien nvDTO = new DTO_NhanVien();
         BUS_NhanVien nvBUS = new BUS_NhanVien();
-        Connection helper = new Connection();
 
         public FrmNhanVien()
         {
