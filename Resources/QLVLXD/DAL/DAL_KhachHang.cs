@@ -32,5 +32,11 @@ namespace DAL
             DataTable dt = helper.GetDataTable("Select * from KhachHang");
             return dt.Rows.Count;
         }
+
+        public DataTable LayMaVaTenKhachHang()
+        {
+            DataTable dt = helper.GetDataTable("Select MaKH, HoTen from KhachHang");
+            return dt; 
+        }
     }
 }

@@ -32,7 +32,7 @@ namespace BUS
          */
         public DataTable LayDsMaVaTenNv()
         {
-            return null;// this._dal_NhanVien.LayMaVaTenNhanVien();
+            return this._dal_NhanVien.LayDsMaVaTenNv();
         }
 
         /**
@@ -40,7 +40,7 @@ namespace BUS
          */
         public DataTable LayDsMaVaTenKh()
         {
-            return null;//this._dal_KhachHang.LayMaVaTenKhachHang();
+            return this._dal_KhachHang.LayMaVaTenKhachHang();
         }
 
         /**

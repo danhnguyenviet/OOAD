@@ -37,6 +37,13 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txtSoLuongBan = new DevExpress.XtraEditors.TextEdit();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.dgvDsHdbh = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThoiGianLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnLuuPhieuNhap = new System.Windows.Forms.Button();
             this.txtConNo = new DevExpress.XtraEditors.TextEdit();
@@ -50,32 +57,25 @@
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
             this.cbTenNvbh = new DevExpress.XtraEditors.ComboBoxEdit();
             this.cbTenKhachHang = new DevExpress.XtraEditors.ComboBoxEdit();
             this.lbMaKh = new DevExpress.XtraEditors.LabelControl();
             this.lbMaNvbh = new DevExpress.XtraEditors.LabelControl();
             this.dgvDanhSachMatHang = new System.Windows.Forms.DataGridView();
-            this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.splitContainerControlWin641 = new DevExpress.XtraCharts.Wizard.SplitContainerControlWin64();
-            this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
-            this.btnThemMatHang = new System.Windows.Forms.Button();
-            this.lbMaMh = new DevExpress.XtraEditors.LabelControl();
-            this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.Stt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MatHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maMh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvDsHdbh = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ThoiGianLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.splitContainerControlWin641 = new DevExpress.XtraCharts.Wizard.SplitContainerControlWin64();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
+            this.btnThemMatHang = new System.Windows.Forms.Button();
+            this.lbMaMh = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgayLap.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgayLap.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaHoaDon.Properties)).BeginInit();
@@ -83,11 +83,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSoLuongBan.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDsHdbh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtConNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTraTruoc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTongTien.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbTenNvbh.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbTenKhachHang.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachMatHang)).BeginInit();
@@ -95,14 +97,12 @@
             this.groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControlWin641)).BeginInit();
             this.splitContainerControlWin641.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
-            this.groupControl4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDsHdbh)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
+            this.groupControl4.SuspendLayout();
             this.SuspendLayout();
             // 
             // dateNgayLap
@@ -182,16 +182,79 @@
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(0, 0);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(893, 166);
+            this.groupControl2.Size = new System.Drawing.Size(825, 148);
             this.groupControl2.TabIndex = 0;
             this.groupControl2.Text = "Danh sách hóa đơn bán hàng";
+            // 
+            // dgvDsHdbh
+            // 
+            this.dgvDsHdbh.AllowUserToAddRows = false;
+            this.dgvDsHdbh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDsHdbh.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.MaHD,
+            this.MaNV,
+            this.MaKH,
+            this.ThoiGianLap,
+            this.TongTien});
+            this.dgvDsHdbh.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDsHdbh.Location = new System.Drawing.Point(2, 21);
+            this.dgvDsHdbh.Name = "dgvDsHdbh";
+            this.dgvDsHdbh.ReadOnly = true;
+            this.dgvDsHdbh.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDsHdbh.Size = new System.Drawing.Size(821, 125);
+            this.dgvDsHdbh.TabIndex = 101;
+            this.dgvDsHdbh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDsHdbh_CellClick);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.Frozen = true;
+            this.dataGridViewTextBoxColumn1.HeaderText = "STT";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 50;
+            // 
+            // MaHD
+            // 
+            this.MaHD.Frozen = true;
+            this.MaHD.HeaderText = "Mã hóa đơn";
+            this.MaHD.Name = "MaHD";
+            this.MaHD.ReadOnly = true;
+            // 
+            // MaNV
+            // 
+            this.MaNV.Frozen = true;
+            this.MaNV.HeaderText = "Mã nhân viên";
+            this.MaNV.Name = "MaNV";
+            this.MaNV.ReadOnly = true;
+            // 
+            // MaKH
+            // 
+            this.MaKH.Frozen = true;
+            this.MaKH.HeaderText = "Mã khách hàng";
+            this.MaKH.Name = "MaKH";
+            this.MaKH.ReadOnly = true;
+            this.MaKH.Width = 120;
+            // 
+            // ThoiGianLap
+            // 
+            this.ThoiGianLap.Frozen = true;
+            this.ThoiGianLap.HeaderText = "Ngày lập";
+            this.ThoiGianLap.Name = "ThoiGianLap";
+            this.ThoiGianLap.ReadOnly = true;
+            // 
+            // TongTien
+            // 
+            this.TongTien.HeaderText = "Tổng tiền";
+            this.TongTien.Name = "TongTien";
+            this.TongTien.ReadOnly = true;
             // 
             // btnThoat
             // 
             this.btnThoat.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.Image = global::GUI_QLVLXD.Properties.Resources.Folders_OS_Exit_Full_Screen_Metro_icon;
             this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThoat.Location = new System.Drawing.Point(801, 60);
+            this.btnThoat.Location = new System.Drawing.Point(726, 60);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(87, 37);
             this.btnThoat.TabIndex = 9;
@@ -317,9 +380,17 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(893, 118);
+            this.groupControl1.Size = new System.Drawing.Size(825, 118);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Thông tin phiếu nhập";
+            // 
+            // groupControl5
+            // 
+            this.groupControl5.Location = new System.Drawing.Point(446, 118);
+            this.groupControl5.Name = "groupControl5";
+            this.groupControl5.Size = new System.Drawing.Size(313, 158);
+            this.groupControl5.TabIndex = 3;
+            this.groupControl5.Text = "groupControl5";
             // 
             // cbTenNvbh
             // 
@@ -379,118 +450,9 @@
             this.dgvDanhSachMatHang.Name = "dgvDanhSachMatHang";
             this.dgvDanhSachMatHang.ReadOnly = true;
             this.dgvDanhSachMatHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDanhSachMatHang.Size = new System.Drawing.Size(507, 154);
+            this.dgvDanhSachMatHang.Size = new System.Drawing.Size(469, 154);
             this.dgvDanhSachMatHang.TabIndex = 100;
             this.dgvDanhSachMatHang.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvDanhSachMatHang_CellMouseDoubleClick);
-            // 
-            // groupControl3
-            // 
-            this.groupControl3.Controls.Add(this.btnThoat);
-            this.groupControl3.Controls.Add(this.txtTongTien);
-            this.groupControl3.Controls.Add(this.btnLuuPhieuNhap);
-            this.groupControl3.Controls.Add(this.labelControl5);
-            this.groupControl3.Controls.Add(this.txtConNo);
-            this.groupControl3.Controls.Add(this.labelControl3);
-            this.groupControl3.Controls.Add(this.labelControl12);
-            this.groupControl3.Controls.Add(this.labelControl8);
-            this.groupControl3.Controls.Add(this.txtTraTruoc);
-            this.groupControl3.Controls.Add(this.labelControl11);
-            this.groupControl3.Controls.Add(this.labelControl10);
-            this.groupControl3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupControl3.Location = new System.Drawing.Point(0, 272);
-            this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(893, 104);
-            this.groupControl3.TabIndex = 1;
-            // 
-            // labelControl4
-            // 
-            this.labelControl4.Location = new System.Drawing.Point(12, 39);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(66, 13);
-            this.labelControl4.TabIndex = 0;
-            this.labelControl4.Text = "Tên mặt hàng";
-            // 
-            // splitContainerControlWin641
-            // 
-            this.splitContainerControlWin641.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainerControlWin641.Horizontal = false;
-            this.splitContainerControlWin641.Location = new System.Drawing.Point(0, 0);
-            this.splitContainerControlWin641.Name = "splitContainerControlWin641";
-            this.splitContainerControlWin641.Panel1.Controls.Add(this.splitContainer1);
-            this.splitContainerControlWin641.Panel1.Controls.Add(this.groupControl3);
-            this.splitContainerControlWin641.Panel1.Controls.Add(this.groupControl1);
-            this.splitContainerControlWin641.Panel1.Text = "Panel1";
-            this.splitContainerControlWin641.Panel2.Controls.Add(this.groupControl2);
-            this.splitContainerControlWin641.Panel2.Text = "Panel2";
-            this.splitContainerControlWin641.Size = new System.Drawing.Size(893, 547);
-            this.splitContainerControlWin641.SplitterPosition = 376;
-            this.splitContainerControlWin641.TabIndex = 3;
-            this.splitContainerControlWin641.Text = "splitContainerControlWin641";
-            // 
-            // groupControl4
-            // 
-            this.groupControl4.Controls.Add(this.cbTenMatHang);
-            this.groupControl4.Controls.Add(this.btnThemMatHang);
-            this.groupControl4.Controls.Add(this.txtSoLuongBan);
-            this.groupControl4.Controls.Add(this.labelControl9);
-            this.groupControl4.Controls.Add(this.labelControl4);
-            this.groupControl4.Controls.Add(this.lbMaMh);
-            this.groupControl4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl4.Location = new System.Drawing.Point(0, 0);
-            this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(382, 154);
-            this.groupControl4.TabIndex = 2;
-            this.groupControl4.Text = "Chi tiết hóa đơn";
-            // 
-            // btnThemMatHang
-            // 
-            this.btnThemMatHang.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemMatHang.Image = global::GUI_QLVLXD.Properties.Resources.Add_Folder_icon;
-            this.btnThemMatHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThemMatHang.Location = new System.Drawing.Point(116, 111);
-            this.btnThemMatHang.Name = "btnThemMatHang";
-            this.btnThemMatHang.Size = new System.Drawing.Size(158, 37);
-            this.btnThemMatHang.TabIndex = 6;
-            this.btnThemMatHang.Text = "Thêm mặt hàng";
-            this.btnThemMatHang.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnThemMatHang.UseVisualStyleBackColor = true;
-            this.btnThemMatHang.Click += new System.EventHandler(this.btnThemMatHang_Click);
-            // 
-            // lbMaMh
-            // 
-            this.lbMaMh.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMaMh.Appearance.ForeColor = System.Drawing.Color.Red;
-            this.lbMaMh.Location = new System.Drawing.Point(84, 63);
-            this.lbMaMh.Name = "lbMaMh";
-            this.lbMaMh.Size = new System.Drawing.Size(37, 13);
-            this.lbMaMh.TabIndex = 0;
-            this.lbMaMh.Text = "Mã Mh";
-            this.lbMaMh.Visible = false;
-            // 
-            // groupControl5
-            // 
-            this.groupControl5.Location = new System.Drawing.Point(446, 118);
-            this.groupControl5.Name = "groupControl5";
-            this.groupControl5.Size = new System.Drawing.Size(313, 158);
-            this.groupControl5.TabIndex = 3;
-            this.groupControl5.Text = "groupControl5";
-            // 
-            // splitContainer1
-            // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 118);
-            this.splitContainer1.Name = "splitContainer1";
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.groupControl4);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.dgvDanhSachMatHang);
-            this.splitContainer1.Size = new System.Drawing.Size(893, 154);
-            this.splitContainer1.SplitterDistance = 382;
-            this.splitContainer1.TabIndex = 3;
             // 
             // Stt
             // 
@@ -535,74 +497,112 @@
             this.maMh.ReadOnly = true;
             this.maMh.Visible = false;
             // 
-            // dgvDsHdbh
+            // groupControl3
             // 
-            this.dgvDsHdbh.AllowUserToAddRows = false;
-            this.dgvDsHdbh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDsHdbh.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.MaHD,
-            this.MaNV,
-            this.MaKH,
-            this.ThoiGianLap,
-            this.TongTien});
-            this.dgvDsHdbh.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvDsHdbh.Location = new System.Drawing.Point(2, 21);
-            this.dgvDsHdbh.Name = "dgvDsHdbh";
-            this.dgvDsHdbh.ReadOnly = true;
-            this.dgvDsHdbh.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDsHdbh.Size = new System.Drawing.Size(889, 143);
-            this.dgvDsHdbh.TabIndex = 101;
-            this.dgvDsHdbh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDsHdbh_CellClick);
+            this.groupControl3.Controls.Add(this.btnThoat);
+            this.groupControl3.Controls.Add(this.txtTongTien);
+            this.groupControl3.Controls.Add(this.btnLuuPhieuNhap);
+            this.groupControl3.Controls.Add(this.labelControl5);
+            this.groupControl3.Controls.Add(this.txtConNo);
+            this.groupControl3.Controls.Add(this.labelControl3);
+            this.groupControl3.Controls.Add(this.labelControl12);
+            this.groupControl3.Controls.Add(this.labelControl8);
+            this.groupControl3.Controls.Add(this.txtTraTruoc);
+            this.groupControl3.Controls.Add(this.labelControl11);
+            this.groupControl3.Controls.Add(this.labelControl10);
+            this.groupControl3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupControl3.Location = new System.Drawing.Point(0, 272);
+            this.groupControl3.Name = "groupControl3";
+            this.groupControl3.Size = new System.Drawing.Size(825, 104);
+            this.groupControl3.TabIndex = 1;
             // 
-            // dataGridViewTextBoxColumn1
+            // labelControl4
             // 
-            this.dataGridViewTextBoxColumn1.Frozen = true;
-            this.dataGridViewTextBoxColumn1.HeaderText = "STT";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 50;
+            this.labelControl4.Location = new System.Drawing.Point(12, 39);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(66, 13);
+            this.labelControl4.TabIndex = 0;
+            this.labelControl4.Text = "Tên mặt hàng";
             // 
-            // MaHD
+            // splitContainerControlWin641
             // 
-            this.MaHD.Frozen = true;
-            this.MaHD.HeaderText = "Mã hóa đơn";
-            this.MaHD.Name = "MaHD";
-            this.MaHD.ReadOnly = true;
+            this.splitContainerControlWin641.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainerControlWin641.Horizontal = false;
+            this.splitContainerControlWin641.Location = new System.Drawing.Point(0, 0);
+            this.splitContainerControlWin641.Name = "splitContainerControlWin641";
+            this.splitContainerControlWin641.Panel1.Controls.Add(this.splitContainer1);
+            this.splitContainerControlWin641.Panel1.Controls.Add(this.groupControl3);
+            this.splitContainerControlWin641.Panel1.Controls.Add(this.groupControl1);
+            this.splitContainerControlWin641.Panel1.Text = "Panel1";
+            this.splitContainerControlWin641.Panel2.Controls.Add(this.groupControl2);
+            this.splitContainerControlWin641.Panel2.Text = "Panel2";
+            this.splitContainerControlWin641.Size = new System.Drawing.Size(825, 529);
+            this.splitContainerControlWin641.SplitterPosition = 376;
+            this.splitContainerControlWin641.TabIndex = 3;
+            this.splitContainerControlWin641.Text = "splitContainerControlWin641";
             // 
-            // MaNV
+            // splitContainer1
             // 
-            this.MaNV.Frozen = true;
-            this.MaNV.HeaderText = "Mã nhân viên";
-            this.MaNV.Name = "MaNV";
-            this.MaNV.ReadOnly = true;
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 118);
+            this.splitContainer1.Name = "splitContainer1";
             // 
-            // MaKH
+            // splitContainer1.Panel1
             // 
-            this.MaKH.Frozen = true;
-            this.MaKH.HeaderText = "Mã khách hàng";
-            this.MaKH.Name = "MaKH";
-            this.MaKH.ReadOnly = true;
-            this.MaKH.Width = 120;
+            this.splitContainer1.Panel1.Controls.Add(this.groupControl4);
             // 
-            // ThoiGianLap
+            // splitContainer1.Panel2
             // 
-            this.ThoiGianLap.Frozen = true;
-            this.ThoiGianLap.HeaderText = "Ngày lập";
-            this.ThoiGianLap.Name = "ThoiGianLap";
-            this.ThoiGianLap.ReadOnly = true;
+            this.splitContainer1.Panel2.Controls.Add(this.dgvDanhSachMatHang);
+            this.splitContainer1.Size = new System.Drawing.Size(825, 154);
+            this.splitContainer1.SplitterDistance = 352;
+            this.splitContainer1.TabIndex = 3;
             // 
-            // TongTien
+            // groupControl4
             // 
-            this.TongTien.HeaderText = "Tổng tiền";
-            this.TongTien.Name = "TongTien";
-            this.TongTien.ReadOnly = true;
+            this.groupControl4.Controls.Add(this.cbTenMatHang);
+            this.groupControl4.Controls.Add(this.btnThemMatHang);
+            this.groupControl4.Controls.Add(this.txtSoLuongBan);
+            this.groupControl4.Controls.Add(this.labelControl9);
+            this.groupControl4.Controls.Add(this.labelControl4);
+            this.groupControl4.Controls.Add(this.lbMaMh);
+            this.groupControl4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupControl4.Location = new System.Drawing.Point(0, 0);
+            this.groupControl4.Name = "groupControl4";
+            this.groupControl4.Size = new System.Drawing.Size(352, 154);
+            this.groupControl4.TabIndex = 2;
+            this.groupControl4.Text = "Chi tiết hóa đơn";
+            // 
+            // btnThemMatHang
+            // 
+            this.btnThemMatHang.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemMatHang.Image = global::GUI_QLVLXD.Properties.Resources.Add_Folder_icon;
+            this.btnThemMatHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThemMatHang.Location = new System.Drawing.Point(116, 111);
+            this.btnThemMatHang.Name = "btnThemMatHang";
+            this.btnThemMatHang.Size = new System.Drawing.Size(158, 37);
+            this.btnThemMatHang.TabIndex = 6;
+            this.btnThemMatHang.Text = "Thêm mặt hàng";
+            this.btnThemMatHang.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnThemMatHang.UseVisualStyleBackColor = true;
+            this.btnThemMatHang.Click += new System.EventHandler(this.btnThemMatHang_Click);
+            // 
+            // lbMaMh
+            // 
+            this.lbMaMh.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMaMh.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.lbMaMh.Location = new System.Drawing.Point(84, 63);
+            this.lbMaMh.Name = "lbMaMh";
+            this.lbMaMh.Size = new System.Drawing.Size(37, 13);
+            this.lbMaMh.TabIndex = 0;
+            this.lbMaMh.Text = "Mã Mh";
+            this.lbMaMh.Visible = false;
             // 
             // FrmHoaDonBanHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(893, 547);
+            this.ClientSize = new System.Drawing.Size(825, 529);
             this.Controls.Add(this.splitContainerControlWin641);
             this.Name = "FrmHoaDonBanHang";
             this.Text = "Hóa đơn bán hàng";
@@ -613,12 +613,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSoLuongBan.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDsHdbh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtConNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTraTruoc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTongTien.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbTenNvbh.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbTenKhachHang.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachMatHang)).EndInit();
@@ -627,15 +629,13 @@
             this.groupControl3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControlWin641)).EndInit();
             this.splitContainerControlWin641.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
-            this.groupControl4.ResumeLayout(false);
-            this.groupControl4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDsHdbh)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
+            this.groupControl4.ResumeLayout(false);
+            this.groupControl4.PerformLayout();
             this.ResumeLayout(false);
 
         }
