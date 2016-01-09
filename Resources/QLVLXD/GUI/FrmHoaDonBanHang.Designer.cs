@@ -182,7 +182,7 @@
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(0, 0);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(825, 148);
+            this.groupControl2.Size = new System.Drawing.Size(841, 188);
             this.groupControl2.TabIndex = 0;
             this.groupControl2.Text = "Danh sách hóa đơn bán hàng";
             // 
@@ -202,7 +202,7 @@
             this.dgvDsHdbh.Name = "dgvDsHdbh";
             this.dgvDsHdbh.ReadOnly = true;
             this.dgvDsHdbh.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDsHdbh.Size = new System.Drawing.Size(821, 125);
+            this.dgvDsHdbh.Size = new System.Drawing.Size(837, 165);
             this.dgvDsHdbh.TabIndex = 101;
             this.dgvDsHdbh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDsHdbh_CellClick);
             // 
@@ -380,7 +380,7 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(825, 118);
+            this.groupControl1.Size = new System.Drawing.Size(841, 118);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Thông tin phiếu nhập";
             // 
@@ -445,12 +445,11 @@
             this.DonGia,
             this.ThanhTien,
             this.maMh});
-            this.dgvDanhSachMatHang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDanhSachMatHang.Location = new System.Drawing.Point(0, 0);
             this.dgvDanhSachMatHang.Name = "dgvDanhSachMatHang";
             this.dgvDanhSachMatHang.ReadOnly = true;
             this.dgvDanhSachMatHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDanhSachMatHang.Size = new System.Drawing.Size(469, 154);
+            this.dgvDanhSachMatHang.Size = new System.Drawing.Size(478, 154);
             this.dgvDanhSachMatHang.TabIndex = 100;
             this.dgvDanhSachMatHang.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvDanhSachMatHang_CellMouseDoubleClick);
             // 
@@ -513,7 +512,7 @@
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupControl3.Location = new System.Drawing.Point(0, 272);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(825, 104);
+            this.groupControl3.Size = new System.Drawing.Size(841, 104);
             this.groupControl3.TabIndex = 1;
             // 
             // labelControl4
@@ -536,7 +535,7 @@
             this.splitContainerControlWin641.Panel1.Text = "Panel1";
             this.splitContainerControlWin641.Panel2.Controls.Add(this.groupControl2);
             this.splitContainerControlWin641.Panel2.Text = "Panel2";
-            this.splitContainerControlWin641.Size = new System.Drawing.Size(825, 529);
+            this.splitContainerControlWin641.Size = new System.Drawing.Size(841, 569);
             this.splitContainerControlWin641.SplitterPosition = 376;
             this.splitContainerControlWin641.TabIndex = 3;
             this.splitContainerControlWin641.Text = "splitContainerControlWin641";
@@ -554,8 +553,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dgvDanhSachMatHang);
-            this.splitContainer1.Size = new System.Drawing.Size(825, 154);
-            this.splitContainer1.SplitterDistance = 352;
+            this.splitContainer1.Size = new System.Drawing.Size(841, 154);
+            this.splitContainer1.SplitterDistance = 358;
             this.splitContainer1.TabIndex = 3;
             // 
             // groupControl4
@@ -569,7 +568,7 @@
             this.groupControl4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl4.Location = new System.Drawing.Point(0, 0);
             this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(352, 154);
+            this.groupControl4.Size = new System.Drawing.Size(358, 154);
             this.groupControl4.TabIndex = 2;
             this.groupControl4.Text = "Chi tiết hóa đơn";
             // 
@@ -602,9 +601,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(825, 529);
+            this.ClientSize = new System.Drawing.Size(841, 569);
             this.Controls.Add(this.splitContainerControlWin641);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmHoaDonBanHang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hóa đơn bán hàng";
             ((System.ComponentModel.ISupportInitialize)(this.dateNgayLap.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgayLap.Properties)).EndInit();

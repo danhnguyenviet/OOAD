@@ -1,0 +1,9 @@
+D:\OOAD\Resources\QLVLXD\BUS\bin\Debug\BUS.dll
+D:\OOAD\Resources\QLVLXD\BUS\bin\Debug\BUS.pdb
+D:\OOAD\Resources\QLVLXD\BUS\bin\Debug\DAL.dll
+D:\OOAD\Resources\QLVLXD\BUS\bin\Debug\DTO.dll
+D:\OOAD\Resources\QLVLXD\BUS\bin\Debug\DAL.pdb
+D:\OOAD\Resources\QLVLXD\BUS\bin\Debug\DTO.pdb
+D:\OOAD\Resources\QLVLXD\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+D:\OOAD\Resources\QLVLXD\BUS\obj\Debug\BUS.dll
+D:\OOAD\Resources\QLVLXD\BUS\obj\Debug\BUS.pdb

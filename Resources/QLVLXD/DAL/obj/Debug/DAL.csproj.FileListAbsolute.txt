@@ -1,0 +1,7 @@
+D:\OOAD\Resources\QLVLXD\DAL\bin\Debug\DAL.dll
+D:\OOAD\Resources\QLVLXD\DAL\bin\Debug\DAL.pdb
+D:\OOAD\Resources\QLVLXD\DAL\bin\Debug\DTO.dll
+D:\OOAD\Resources\QLVLXD\DAL\bin\Debug\DTO.pdb
+D:\OOAD\Resources\QLVLXD\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\OOAD\Resources\QLVLXD\DAL\obj\Debug\DAL.dll
+D:\OOAD\Resources\QLVLXD\DAL\obj\Debug\DAL.pdb
