@@ -37,6 +37,12 @@
             this.txtSoTienNop = new DevExpress.XtraEditors.TextEdit();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.dgvPhieuThanhToan = new System.Windows.Forms.DataGridView();
+            this.Stt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaPhieuTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoTienNop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThoiGianNop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnLuuPhieuThanhToan = new System.Windows.Forms.Button();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
@@ -51,12 +57,6 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.splitContainerControlWin641 = new DevExpress.XtraCharts.Wizard.SplitContainerControlWin64();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
-            this.Stt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaPhieuTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoTienNop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ThoiGianNop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgayNop.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgayNop.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaPhieuThanhToan.Properties)).BeginInit();
@@ -141,7 +141,7 @@
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(0, 0);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(847, 174);
+            this.groupControl2.Size = new System.Drawing.Size(825, 294);
             this.groupControl2.TabIndex = 0;
             this.groupControl2.Text = "Danh sách phiếu thanh toán";
             // 
@@ -162,16 +162,53 @@
             this.dgvPhieuThanhToan.Name = "dgvPhieuThanhToan";
             this.dgvPhieuThanhToan.ReadOnly = true;
             this.dgvPhieuThanhToan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPhieuThanhToan.Size = new System.Drawing.Size(843, 151);
+            this.dgvPhieuThanhToan.Size = new System.Drawing.Size(821, 271);
             this.dgvPhieuThanhToan.TabIndex = 0;
             this.dgvPhieuThanhToan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhieuThanhToan_CellClick);
+            // 
+            // Stt
+            // 
+            this.Stt.HeaderText = "STT";
+            this.Stt.Name = "Stt";
+            this.Stt.ReadOnly = true;
+            this.Stt.Width = 50;
+            // 
+            // MaPhieuTT
+            // 
+            this.MaPhieuTT.HeaderText = "Mã phiếu thanh toán";
+            this.MaPhieuTT.Name = "MaPhieuTT";
+            this.MaPhieuTT.ReadOnly = true;
+            // 
+            // SoTienNop
+            // 
+            this.SoTienNop.HeaderText = "Số tiền nộp";
+            this.SoTienNop.Name = "SoTienNop";
+            this.SoTienNop.ReadOnly = true;
+            // 
+            // ThoiGianNop
+            // 
+            this.ThoiGianNop.HeaderText = "Ngày nộp";
+            this.ThoiGianNop.Name = "ThoiGianNop";
+            this.ThoiGianNop.ReadOnly = true;
+            // 
+            // MaHD
+            // 
+            this.MaHD.HeaderText = "Mã hóa đơn";
+            this.MaHD.Name = "MaHD";
+            this.MaHD.ReadOnly = true;
+            // 
+            // MaNV
+            // 
+            this.MaNV.HeaderText = "Mã nhân viên";
+            this.MaNV.Name = "MaNV";
+            this.MaNV.ReadOnly = true;
             // 
             // btnThoat
             // 
             this.btnThoat.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.Image = global::GUI_QLVLXD.Properties.Resources.Folders_OS_Exit_Full_Screen_Metro_icon;
             this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThoat.Location = new System.Drawing.Point(755, 24);
+            this.btnThoat.Location = new System.Drawing.Point(733, 24);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(87, 37);
             this.btnThoat.TabIndex = 7;
@@ -215,7 +252,7 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(847, 158);
+            this.groupControl1.Size = new System.Drawing.Size(825, 158);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Thông tin phiếu nhập";
             // 
@@ -313,7 +350,7 @@
             this.splitContainerControlWin641.Panel1.Text = "Panel1";
             this.splitContainerControlWin641.Panel2.Controls.Add(this.groupControl2);
             this.splitContainerControlWin641.Panel2.Text = "Panel2";
-            this.splitContainerControlWin641.Size = new System.Drawing.Size(847, 409);
+            this.splitContainerControlWin641.Size = new System.Drawing.Size(825, 529);
             this.splitContainerControlWin641.SplitterPosition = 230;
             this.splitContainerControlWin641.TabIndex = 3;
             this.splitContainerControlWin641.Text = "splitContainerControlWin641";
@@ -325,53 +362,18 @@
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl3.Location = new System.Drawing.Point(0, 158);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(847, 72);
+            this.groupControl3.Size = new System.Drawing.Size(825, 72);
             this.groupControl3.TabIndex = 2;
-            // 
-            // Stt
-            // 
-            this.Stt.HeaderText = "STT";
-            this.Stt.Name = "Stt";
-            this.Stt.ReadOnly = true;
-            this.Stt.Width = 50;
-            // 
-            // MaPhieuTT
-            // 
-            this.MaPhieuTT.HeaderText = "Mã phiếu thanh toán";
-            this.MaPhieuTT.Name = "MaPhieuTT";
-            this.MaPhieuTT.ReadOnly = true;
-            // 
-            // SoTienNop
-            // 
-            this.SoTienNop.HeaderText = "Số tiền nộp";
-            this.SoTienNop.Name = "SoTienNop";
-            this.SoTienNop.ReadOnly = true;
-            // 
-            // ThoiGianNop
-            // 
-            this.ThoiGianNop.HeaderText = "Ngày nộp";
-            this.ThoiGianNop.Name = "ThoiGianNop";
-            this.ThoiGianNop.ReadOnly = true;
-            // 
-            // MaHD
-            // 
-            this.MaHD.HeaderText = "Mã hóa đơn";
-            this.MaHD.Name = "MaHD";
-            this.MaHD.ReadOnly = true;
-            // 
-            // MaNV
-            // 
-            this.MaNV.HeaderText = "Mã nhân viên";
-            this.MaNV.Name = "MaNV";
-            this.MaNV.ReadOnly = true;
             // 
             // FrmPhieuThanhToan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(847, 409);
+            this.ClientSize = new System.Drawing.Size(825, 529);
             this.Controls.Add(this.splitContainerControlWin641);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmPhieuThanhToan";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Phiếu thanh toán";
             ((System.ComponentModel.ISupportInitialize)(this.dateNgayNop.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgayNop.Properties)).EndInit();

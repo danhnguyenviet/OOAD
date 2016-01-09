@@ -32,5 +32,11 @@ namespace DAL
             DataTable dt = helper.GetDataTable("Select * from NhanVien");
             return dt.Rows.Count;
         }
+
+        public DataTable LayDsMaVaTenNv()
+        {
+            DataTable dt = helper.GetDataTable("Select MaNV, TenNV from NhanVien");
+            return dt;
+        }
     }
 }

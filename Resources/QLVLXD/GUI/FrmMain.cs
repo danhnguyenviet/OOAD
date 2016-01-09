@@ -65,9 +65,9 @@ namespace GUI_QLVLXD
             {
                 frm.Close();
             }
-            FrmNhanVien nv = new FrmNhanVien();
-            nv.MdiParent = this;
-            nv.Show();
+            FrmHoaDonBanHang frmHdbh = new FrmHoaDonBanHang();
+            frmHdbh.MdiParent = this;
+            frmHdbh.Show();
         }
 
         private void btnThanhToan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -195,7 +195,5 @@ namespace GUI_QLVLXD
             nv.Show();
         }
 
-
->>>>>>> 86f40d1c4990c6b3e3bf6cad606d62396ff55546
     }
 }

@@ -28,7 +28,7 @@ namespace DAL
                  sql.Close();
                  return true;
             }
-            catch(Exception e){return false;}
+            catch(Exception){return false;}
         }
     }
 }
