@@ -42,8 +42,11 @@ namespace DAL
          */
         public string LayTenMatHangTheoMaLh(string maLh)
         {
-            DataTable dt = connection.GetDataTable("SELECT TenMH FROM MatHang WHERE MaMH IN (SELECT MaLH FROM LoHang WHERE MaLH='" + maLh + "')");
-            return dt.Rows[0]["TenMH"].ToString();
+            DataTable dt = connection.GetDataTable("SELECT TenMH FROM MatHang WHERE MaMH IN (SELECT MaMH FROM LoHang WHERE MaLH='" + maLh + "')");
+            if (dt.Rows.Count != 0)
+                return dt.Rows[0]["TenMH"].ToString();
+            else
+                return "";
         }
 
         /**
