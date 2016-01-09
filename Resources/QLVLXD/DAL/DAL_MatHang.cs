@@ -17,7 +17,7 @@ namespace DAL
         }
         public void UpdateMatHang(DTO_MatHang mhDTO)
         {
-            helper.ThucHienCauLenhSQL("UPDATE MatHang SET TenMH =N'" + mhDTO.TenMH + "', TenNSX =N'" + mhDTO.TenNSX + "', MaDVT =N'" + mhDTO.MaDVT + "', ThueVAT =N'" + mhDTO.ThueVAT + "',  where MaMH = N'" + mhDTO.MaMH + "'");
+            helper.ThucHienCauLenhSQL("UPDATE MatHang SET TenMH =N'" + mhDTO.TenMH + "', TenNSX =N'" + mhDTO.TenNSX + "', MaDVT =N'" + mhDTO.MaDVT + "', ThueVAT =N'" + mhDTO.ThueVAT + "' where MaMH = N'" + mhDTO.MaMH + "'");
         }
         public void DeleteMatHang(DTO_MatHang mhDTO)
         {

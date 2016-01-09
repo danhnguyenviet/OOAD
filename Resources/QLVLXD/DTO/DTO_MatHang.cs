@@ -10,7 +10,9 @@ namespace DTO
         string _MaMH;
         string _TenMH;
         string _TenNSX;
+        string _nhaSX;
         string _MaDVT;
+        string _donViTinh;
         float _ThueVAT;
 
         public float ThueVAT
@@ -41,6 +43,32 @@ namespace DTO
         {
             get { return _MaMH; }
             set { _MaMH = value; }
+        }
+
+        public string NhaSX
+        {
+            get
+            {
+                return _nhaSX;
+            }
+
+            set
+            {
+                _nhaSX = value;
+            }
+        }
+
+        public string DonViTinh
+        {
+            get
+            {
+                return _donViTinh;
+            }
+
+            set
+            {
+                _donViTinh = value;
+            }
         }
 
         public DTO_MatHang(string MaMH = "",string TenMH = "",string TenNSX = "", string MaDVT = "", float ThueVAT = 0)

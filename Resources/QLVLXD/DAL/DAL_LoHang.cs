@@ -11,6 +11,8 @@ namespace DAL
 {
     public class DAL_LoHang
     {
+
+
         private Connection connection;
         private DAL_CTHoaDon _cthd;
 
@@ -19,6 +21,22 @@ namespace DAL
             this.connection = new Connection();
             this._cthd = new DAL_CTHoaDon();
         }
+        //Tạo bảng lo hàng
+        public DataTable TaobangLoHang(string dieukien)
+        {
+            return connection.GetDataTable("select * from LOHANG " + dieukien);
+        }
+        //Thêm lo hàng mới
+        public void InsertLoHang(DTO_LoHang lhDTO)
+        {
+            connection.ThucHienCauLenhSQL("INSERT INTO LoHang (MaLH, MaMH,NgaySX,HanSD,SLNhap,SLBan,GiaNhap,GiaBan) VALUES (N'" + lhDTO.MaLh + "',N'" + lhDTO.MaMh + "',N'" + lhDTO.NgaySx.ToShortDateString() + "',N'" + lhDTO.HanSd + "',N'" + lhDTO.SlNhap + "',N'" + lhDTO.SlBan + "',N'" + lhDTO.GiaNhap + "',N'" + lhDTO.GiaBan + "')");
+        }
+        //Xóa lô hàng
+        public void DeleteLoHang(string mhDTO)
+        {
+            connection.ThucHienCauLenhSQL("DELETE from LoHang Where MaLH = N'" + mhDTO + "'");
+        }
+
 
         // Load distinct danh sách lô hàng có số lượng bán lớn nhất
         public DataTable LayDsHangTonHienTai()

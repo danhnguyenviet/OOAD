@@ -1,32 +1,29 @@
-﻿using DTO;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DTO;
+using System.Data;
 
 namespace DAL
 {
+
     public class DAL_CTPhieuNhap
     {
         public Connection helper = new Connection();
 
-        public void InsertCTNhapHang(DTO_CTPhieuNhap ctPN_DTO)
+        public void InsertCTPhieuNhap(DTO_CTPhieuNhap nhDTO)
         {
-            helper.ThucHienCauLenhSQL("INSERT INTO CHITIETPHIEUNHAP (MaPN, MaLH) VALUES (N'" + ctPN_DTO.MaPN + "',N'" + ctPN_DTO.MaLH + "')");
+            helper.ThucHienCauLenhSQL("INSERT INTO ChiTietPhieuNhap (MaPN, MaLH) VALUES (N'" + nhDTO.MaPN + "',N'" + nhDTO.MaLH + "')");
         }
-        public void UpdateCTNhapHang(DTO_CTPhieuNhap ctPN_DTO)
+        public void DeleteCTPhieuNhap(string nhDTO)
         {
-            helper.ThucHienCauLenhSQL("UPDATE CHITIETPHIEUNHAP SET MaLH =N'" + ctPN_DTO.MaLH + "' where MaPN = N'" + ctPN_DTO.MaPN + "'");
+            helper.ThucHienCauLenhSQL("DELETE from ChiTietPhieuNhap Where MaPN = N'" + nhDTO +"'");
         }
-        public void DeleteCTNhapHang(DTO_CTPhieuNhap ctPN_DTO)
+        public DataTable TaobangCTPhieuNhap(string dieukien)
         {
-            helper.ThucHienCauLenhSQL("DELETE from CHITIETPHIEUNHAP Where MaPN=N'" + ctPN_DTO.MaPN + "'");
-        }
-        public DataTable TaobangCTNhapHang(string dieukien)
-        {
-            return helper.GetDataTable("select * from CHITIETPHIEUNHAP " + dieukien);
+            return helper.GetDataTable("select * from ChiTietPhieuNhap " + dieukien);
         }
     }
 }

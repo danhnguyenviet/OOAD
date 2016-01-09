@@ -9,7 +9,9 @@ namespace DTO
     {
         private string _maPN;
         private string _maNV;
+        private string _tenNV;
         private string _maNCC;
+        private string _tenNCC;
         private DateTime _thoiGianLap;
 
         public string MaPN
@@ -61,6 +63,32 @@ namespace DTO
             set
             {
                 _maNCC = value;
+            }
+        }
+
+        public string TenNV
+        {
+            get
+            {
+                return _tenNV;
+            }
+
+            set
+            {
+                _tenNV = value;
+            }
+        }
+
+        public string TenNCC
+        {
+            get
+            {
+                return _tenNCC;
+            }
+
+            set
+            {
+                _tenNCC = value;
             }
         }
     }

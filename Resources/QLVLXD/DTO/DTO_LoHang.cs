@@ -19,6 +19,7 @@ namespace DTO
         private string _slBan;
         private string _giaNhap;
         private string _giaBan;
+        private string _tenMH;
 
         public DTO_LoHang() { }
 
@@ -35,34 +36,34 @@ namespace DTO
             this._giaBan = giaBan;
         }
 
+        public string MaLh
+        {
+            get { return _maLh; }
+            set { _maLh = value; }
+        }
+
+        public string MaMh
+        {
+            get { return _maMh; }
+            set { _maMh = value; }
+        }
+        public string TenMH
+        {
+            get
+            {
+                return _tenMH;
+            }
+
+            set
+            {
+                _tenMH = value;
+            }
+        }
+
         public DateTime NgaySx
         {
             get { return _ngaySx; }
             set { _ngaySx = value; }
-        }
-
-        public string GiaBan
-        {
-            get { return _giaBan; }
-            set { _giaBan = value; }
-        }
-
-        public string GiaNhap
-        {
-            get { return _giaNhap; }
-            set { _giaNhap = value; }
-        }
-
-        public string SlBan
-        {
-            get { return _slBan; }
-            set { _slBan = value; }
-        }
-
-        public string SlNhap
-        {
-            get { return _slNhap; }
-            set { _slNhap = value; }
         }
 
         public string HanSd
@@ -71,16 +72,29 @@ namespace DTO
             set { _hanSd = value; }
         }
 
-        public string MaMh
+        public string SlNhap
         {
-            get { return _maMh; }
-            set { _maMh = value; }
+            get { return _slNhap; }
+            set { _slNhap = value; }
+        }
+        public string GiaNhap
+        {
+            get { return _giaNhap; }
+            set { _giaNhap = value; }
+        }
+        public string SlBan
+        {
+            get { return _slBan; }
+            set { _slBan = value; }
         }
 
-        public string MaLh
+
+        public string GiaBan
         {
-            get { return _maLh; }
-            set { _maLh = value; }
+            get { return _giaBan; }
+            set { _giaBan = value; }
         }
+
+
     }
 }
