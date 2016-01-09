@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using BUS;
-using DAL;
 using DTO;
 
 namespace GUI_QLVLXD
@@ -19,7 +18,6 @@ namespace GUI_QLVLXD
         bool Them;
         DTO_DonViTinh dvtDTO = new DTO_DonViTinh();
         BUS_DonViTinh dvtBUS = new BUS_DonViTinh();
-        Connection helper = new Connection();
 
         public FrmDonViTinh()
         {
