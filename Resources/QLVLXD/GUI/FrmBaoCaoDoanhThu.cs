@@ -20,6 +20,7 @@ namespace GUI_QLVLXD
         public FrmBaoCaoDoanhThu()
         {
             InitializeComponent();
+            this.Dock = DockStyle.Fill;
 
         }
 

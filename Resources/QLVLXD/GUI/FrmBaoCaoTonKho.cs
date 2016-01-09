@@ -19,6 +19,7 @@ namespace GUI_QLVLXD
         public FrmBaoCaoTonKho()
         {
             InitializeComponent();
+            this.Dock = DockStyle.Fill;
         }
 
         private void LayThongTinBaoCao()

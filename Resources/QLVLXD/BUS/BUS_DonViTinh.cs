@@ -8,7 +8,7 @@ using DAL;
 using DTO;
 namespace BUS
 {
-    class BUS_DonViTinh
+    public class BUS_DonViTinh
     {
         private DAL_DonViTinh dvt = new DAL_DonViTinh();
         public DataTable TaobangDonViTinh(string dieukien)
@@ -27,6 +27,25 @@ namespace BUS
         public void XoadulieuDonViTinh(DTO_DonViTinh et)
         {
             dvt.DeleteDonViTinh(et);
+        }
+
+        public string TuTinhMa()
+        {
+            int i = dvt.LayKichThuocBang() + 1;
+            string s;
+            if (i < 10)
+            {
+                s = "DVT00" + i.ToString();
+            }
+            else if (i >= 10 && i < 100)
+            {
+                s = "DVT0" + i.ToString();
+            }
+            else
+            {
+                s = "DVT" + i.ToString();
+            }
+            return s;
         }
     }
 }
