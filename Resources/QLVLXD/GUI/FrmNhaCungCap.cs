@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using BUS;
-using DAL;
 using DTO;
 
 namespace GUI_QLVLXD
@@ -19,7 +18,6 @@ namespace GUI_QLVLXD
         bool Them;
         DTO_NhaCC NccDTO = new DTO_NhaCC();
         BUS_NhaCC NccBUS = new BUS_NhaCC();
-        Connection helper = new Connection();
 
         public FrmNhaCungCap()
         {

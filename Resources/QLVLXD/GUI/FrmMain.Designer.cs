@@ -528,7 +528,7 @@
             // 
             this.ribbonPageGroup13.ItemLinks.Add(this.barButtonItem3);
             this.ribbonPageGroup13.Name = "ribbonPageGroup13";
-            this.ribbonPageGroup13.Text = "ribbonPageGroup13";
+            this.ribbonPageGroup13.Text = "Báo Cáo Doanh Thu";
             // 
             // ribbonPageGroup14
             // 
